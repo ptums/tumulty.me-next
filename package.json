@@ -15,21 +15,6 @@
     "test:ci": "jest --ci --coverage --silent",
     "test:coverage": "jest --coverage ."
   },
-  "lint-staged": {
-    "*.js": [
-      "yarn test",
-      "yarn test:coverage",
-      "yarn format",
-      "yarn lint",
-      "eslint --cache --fix"
-    ],
-    "*css": [
-      "yarn format"
-    ],
-    "*": [
-      "git add"
-    ]
-  },
   "author": "peter tumulty",
   "license": "ISC",
   "dependencies": {
