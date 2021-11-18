@@ -1,0 +1,77 @@
+{
+  "name": "tumulty-next-me",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 4000",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": " eslint . --fix",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "test": "jest .",
+    "test:ci": "jest --ci --coverage --silent",
+    "test:coverage": "jest --coverage ."
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn format",
+      "yarn lint",
+      "eslint --cache --fix"
+    ],
+    "*css": [
+      "yarn format"
+    ],
+    "*": [
+      "git add"
+    ]
+  },
+  "author": "peter tumulty",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.25.0",
+    "gray-matter": "^4.0.3",
+    "next": "^12.0.4",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
+    "react-markdown": "^7.1.0",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^12.0.4",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/react": "^17.0.35",
+    "@types/react-instantsearch-dom": "^6.12.0",
+    "@types/styled-components": "^5.1.15",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "babel-plugin-styled-components": "^1.13.3",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.0",
+    "jest": "^27.3.1",
+    "jest-styled-components": "^7.0.6",
+    "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^11.1.2",
+    "next-sitemap": "^1.6.140",
+    "prettier": "^2.2.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  }
+}
