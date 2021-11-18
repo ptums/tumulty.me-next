@@ -5,6 +5,8 @@ description: "To start learning to love and understand caching, let's take a loo
 tagLine: "Stop hating brower cache and learn to love it!"
 tags: post
 ---
+
+# The pieces that make up browser caching
 ## To start learning to love and understand caching, let's take a look at it's pieces.
 
 ![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/c_scale,w_750/v1630949949/tumulty.me/legos.jpg)

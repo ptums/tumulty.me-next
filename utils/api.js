@@ -29,7 +29,6 @@ export function getPostBySlug(slug, fields = []) {
     if(field === 'date') {
       const dateStr = data[field];
       const dateObj = new Date(dateStr);
-      console.log(dateStr)
 
       const formatedDate = format(dateObj, 'MM/dd/yyyy');
       items['formatDate'] = formatedDate.toString()

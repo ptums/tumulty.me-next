@@ -11,7 +11,7 @@ tags: post
 ## What are web components? They are a set of browser APIs that give the developer the ability to create reusable customizable elements within a web application.
 
 
-![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/c_scale,w_750/v1630949949/tumulty.me/legos.jpg)
+![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/v1637273811/tumulty.me/tekton-SVpCSOCcCwA-unsplash_1.jpg)
 
 
 Source material for this post

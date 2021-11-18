@@ -17,8 +17,6 @@ const SinglePost: React.FC<Props> = ({ post }: Props) => {
     return <ErrorPage statusCode={404} />
   }
 
-  console.log(formatDate);
-
 
   return (
     <>
@@ -27,8 +25,7 @@ const SinglePost: React.FC<Props> = ({ post }: Props) => {
         <Date>
         <strong>Published: </strong> {formatDate}
         </Date>
-        <BlogContainer>
-         
+        <BlogContainer>         
           <ReactMarkdown children={content} />
         </BlogContainer>
       </Main>
@@ -55,6 +52,9 @@ const BlogContainer = styled.div`
   padding: 16px 148px;
   ${(props) => props.theme.fonts.xxxxl};
 
+  h1 {
+    line-height: 1;
+  }
   h2 {
     line-height: 1.3;
   }

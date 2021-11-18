@@ -17,6 +17,8 @@
   },
   "lint-staged": {
     "*.js": [
+      "yarn test",
+      "yarn test:coverage",
       "yarn format",
       "yarn lint",
       "eslint --cache --fix"
