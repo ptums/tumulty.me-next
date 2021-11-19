@@ -19,7 +19,7 @@ const Home = () => (
       <HomeContainer>
         <ImageContainer>
           <Image
-            src="/images/peter-face.png"
+            src="/images/peter-face.webp"
             alt="Peter Tumulty"
             width={297}
             height={344}

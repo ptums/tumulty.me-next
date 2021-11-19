@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
 
   
   html {
-    background: url(images/tech-6.jpeg) no-repeat center center fixed;
+    background: url(images/tech-6.webp) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

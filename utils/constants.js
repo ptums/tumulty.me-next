@@ -120,12 +120,40 @@ export const PROJECTS = [
   },
 ]
 
-const REVIEWS = [
+export const REVIEWS = [
   {
     id: 1,
     name: 'Salwa Khan',
-    company: 'CubbieKit',
-    review:
+    company: 'Owner, CubbieKit',
+    statement:
       'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
   },
+  {
+    id: 2,
+    name: 'Jessica Rebelo',
+    company: 'Owner, Unleashed Potential Life Coaching',
+    statement:
+      'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
+  },
+  // {
+  //   id: 3,
+  //   name: 'Peter S. Moeller',
+  //   company: 'Director of Business Development, Scarinci Hollenbeck, LLC',
+  //   statement:
+  //     'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
+  // },
+  // {
+  //   id: 4,
+  //   name: 'Andrew Devhaven',
+  //   company: 'Engineer at LowCode, LLC',
+  //   statement:
+  //     'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Andrew Devhaven',
+  //   company: 'Engineer at LowCode, LLC',
+  //   statement:
+  //     'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
+  // },
 ]

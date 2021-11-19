@@ -1,9 +1,11 @@
+import SingleReview from 'components/SingleReview'
 import SiteHead from 'components/SiteHead'
 import Main from 'layouts/Main'
 import Page from 'layouts/Page'
+import Projects from 'layouts/Projects'
 import Title from 'layouts/Title'
 import React from 'react'
-import { getAllPosts } from 'utils/api'
+import { REVIEWS } from 'utils/constants'
 
 const SEO = {
   title: 'Reviews | Peter Tumulty Web Developer',
@@ -17,18 +19,15 @@ const Reviews = () => {
       <SiteHead {...SEO} />
       <Main pageWidth="100%">
         <Title>Reviews</Title>
-        <Page>Reviews will go here...</Page>
+        <Page>
+          <Projects>
+            {REVIEWS.map((review) => (
+              <SingleReview review={review} key={review.id} />
+            ))}
+          </Projects>
+        </Page>
       </Main>
     </>
   )
 }
-
-export async function getStaticProps() {
-  const allPosts = getAllPosts(['title', 'slug', 'date', 'description', 'tagLine'])
-
-  return {
-    props: { allPosts },
-  }
-}
-
 export default Reviews
