@@ -11,7 +11,7 @@ interface Props {
 }
 const RowBlock: React.FC<Props> = ({ title, list, column }: Props) => {
   return (
-    <Row>
+    <Card cardMargin="0px">
       <RowTitle>{title}</RowTitle>
       {column === 1 && (
         <OneColumn>
@@ -29,24 +29,22 @@ const RowBlock: React.FC<Props> = ({ title, list, column }: Props) => {
           ))}
         </TwoColumns>
       )}
-    </Row>
+    </Card>
   )
 }
 
-const Row = styled(Card)`
-  padding: 0 8px !important;
-  margin: 0 !important;
-`
 const RowTitle = styled.p`
   margin-bottom: 16px;
   ${(props) => props.theme.fonts.xxxl};
   color: ${(props) => props.theme.colors.mediumGreen};
+  padding: 0 16px;
 `
 
 const OneColumn = styled.div`
   display: flex;
   ${(props) => props.theme.fonts.xxl};
   margin-bottom: 32px;
+  padding: 0 16px;
 
   a {
     margin-right: 16px;
@@ -61,6 +59,7 @@ const TwoColumns = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 0 16px;
 
   span {
     margin-bottom: 8px;

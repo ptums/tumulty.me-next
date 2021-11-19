@@ -12,7 +12,7 @@ const SinglePost: React.FC<Props> = ({ post }: Props) => {
   const { title, slug, tagLine, description } = post
 
   return (
-    <Card>
+    <Card cardMargin="24px 32px;">
       <Link href={`/post/${slug}`}>
         <a>
           <Title>{title}</Title>
