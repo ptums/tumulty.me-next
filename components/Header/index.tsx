@@ -19,6 +19,9 @@ const SiteHeader = () => (
           />
         </a>
       </Link>
+      <Contact>
+        <a href="mailto:tumultywebservices@gmail.com">tumultywebservices@gmail.com</a>
+      </Contact>
     </Title>
     <Menu />
   </Header>
@@ -32,5 +35,19 @@ const Header = styled.header`
 const Title = styled.div`
   display: flex;
   flex-direction: row;
+`
+
+const Contact = styled.div`
+  margin 20px 4px;
+  ${(props) => props.theme.fonts.xxxl};
+
+  a {
+    color:${(props) => props.theme.colors.darkGreen};
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
 export default SiteHeader
