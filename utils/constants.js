@@ -2,56 +2,56 @@ export const SITE_NAVS = [
   {
     id: 1,
     slug: '/',
-    label: 'About'
+    label: 'About',
   },
   {
     id: 2,
     slug: '/previous-work',
-    label: 'Previous Work'
+    label: 'Previous Work',
   },
   {
     id: 3,
     slug: '/blog',
-    label: 'Blog'
+    label: 'Blog',
   },
   {
     id: 4,
     slug: '/reviews',
-    label: 'Reviews'
+    label: 'Reviews',
   },
   {
     id: 5,
     slug: '/resume',
-    label: 'Resume'
-  }
-];
+    label: 'Resume',
+  },
+]
 export const CONTACTS = [
   {
     id: 1,
     slug: 'https://twitter.com/ptums923',
-    label: 'Twitter'
+    label: 'Twitter',
   },
   {
     id: 2,
     slug: 'https://www.instagram.com/ptums923',
-    label: 'Instagram'
+    label: 'Instagram',
   },
   {
     id: 3,
     slug: 'https://github.com/ptums',
-    label: 'Github'
+    label: 'Github',
   },
   {
     id: 4,
     slug: 'https://www.linkedin.com/in/petertumulty',
-    label: 'LinkedIn'
+    label: 'LinkedIn',
   },
   {
     id: 5,
     slug: 'mailto:tumultywebservices@gmail.com',
-    label: 'Email'
-  }
-];
+    label: 'Email',
+  },
+]
 
 export const RECENT_STACK = [
   'Typescript',
@@ -59,8 +59,8 @@ export const RECENT_STACK = [
   'Svelte',
   'Tailwind.css',
   'Styled Components',
-  'Vercel'
-];
+  'Vercel',
+]
 
 export const PROJECTS = [
   {
@@ -69,7 +69,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740502/tumulty.me/sites/Asbury_Park_High_School_Hall_of_Fame.mp4',
     label: 'Asbury Park High School Hall of Fame',
-    stack: ['Next.js', 'Bootstrap', 'Cloudinary', 'MongoDB']
+    stack: ['Next.js', 'Bootstrap', 'Cloudinary', 'MongoDB'],
   },
   {
     id: 2,
@@ -77,7 +77,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740421/tumulty.me/sites/Scarinci_Hollenbeck_-_Full_Service_NJ_NY_DC_Business_Law_Firm_1.mp4',
     label: 'Scarinci Hollenbeck',
-    stack: ['Next.js', 'Styled Components', 'Typescript', 'Cloudinary', 'MySQL', 'Kwes Forms']
+    stack: ['Next.js', 'Styled Components', 'Typescript', 'Cloudinary', 'MySQL', 'Kwes Forms'],
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740967/tumulty.me/sites/Wave_Landscaping_Design__lawn_maintenance_and_design_services.mp4',
     label: 'Wave Landscaping & Design',
-    stack: ['Next.js', 'Bootstrap', 'Fauna DB']
+    stack: ['Next.js', 'Bootstrap', 'Fauna DB'],
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740900/tumulty.me/sites/Digital_Acceleration_Summit_2021.mp4',
     label: 'Zalando Digital Summit 2021 Event',
-    stack: ['Next.js', 'Typescript', 'Tailwind.css', 'Airtable']
+    stack: ['Next.js', 'Typescript', 'Tailwind.css', 'Airtable'],
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741431/tumulty.me/sites/Donald_Scarinci_s_Numismatics_Catalog.mp4',
     label: "Donald Scarinci's Numismatics Catalog",
-    stack: ['Next.js', 'Styled Components', 'Cloudinary', 'GraphQL']
+    stack: ['Next.js', 'Styled Components', 'Cloudinary', 'GraphQL'],
   },
   {
     id: 6,
@@ -115,7 +115,17 @@ export const PROJECTS = [
       'Cloudinary',
       'MongoDB',
       'Jest',
-      'Progressive Web Application'
-    ]
-  }		
-];
+      'Progressive Web Application',
+    ],
+  },
+]
+
+const REVIEWS = [
+  {
+    id: 1,
+    name: 'Salwa Khan',
+    company: 'CubbieKit',
+    review:
+      'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
+  },
+]

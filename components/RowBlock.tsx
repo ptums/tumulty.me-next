@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 import styled from 'styled-components'
 import { Contact } from 'types/Contact'
 
@@ -16,16 +16,16 @@ const RowBlock: React.FC<Props> = ({ title, list, column }: Props) => {
         <OneColumn>
           {list.map((item) => (
             <Link href={item.slug} key={item.id}>
-              <a>
-                {item.label}
-              </a>
+              <a>{item.label}</a>
             </Link>
           ))}
         </OneColumn>
       )}
       {column === 2 && (
         <TwoColumns>
-          {list.map((i) => <span key={i}>{i}</span>)}
+          {list.map((i) => (
+            <span key={i}>{i}</span>
+          ))}
         </TwoColumns>
       )}
     </>
@@ -45,18 +45,17 @@ const OneColumn = styled.div`
 
   a {
     margin-right: 16px;
-		color: ${props => props.theme.colors.darkGreen};
+    color: ${(props) => props.theme.colors.darkGreen};
   }
 `
 const TwoColumns = styled.div`
   ${(props) => props.theme.fonts.xxl};
-  color: ${props => props.theme.colors.darkGreen};
+  color: ${(props) => props.theme.colors.darkGreen};
   max-height: 50px;
   max-width: 300px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  
 
   span {
     margin-bottom: 8px;

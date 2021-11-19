@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 import styled from 'styled-components'
 import { Project } from 'types/Project'
 
@@ -11,12 +11,10 @@ const SingleProject: React.FC<Props> = ({ project }: Props) => {
   const { slug, video, label, stack } = project
   return (
     <>
-
       <Card>
         <Link href={slug}>
           <a>
             <div
-              
               dangerouslySetInnerHTML={{
                 __html: `
             <video class="graphic-container mobile-video" autoplay = "true" muted = "true" playsinline = "true" loop = "true" >
@@ -56,7 +54,7 @@ const Card = styled.div`
   max-width: 420px;
   margin-bottom: 24px;
 
-  @media (min-width: ${props => props.theme.breakpoints.lg}){
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     margin: 24px 32px;
     width: 420px;
     max-width: 100%;

@@ -1,5 +1,5 @@
-import React from 'react'
 import Link from 'next/link'
+import React from 'react'
 import styled from 'styled-components'
 import { Post } from 'types/Post'
 
@@ -72,7 +72,7 @@ const Description = styled.p`
 const ButtonLink = styled.div`
   padding: 0 16px 16px;
   ${(props) => props.theme.fonts.xxxl};
-    color: ${(props) => props.theme.colors.darkGreen};
-    font-weight: 700;
+  color: ${(props) => props.theme.colors.darkGreen};
+  font-weight: 700;
 `
 export default SinglePost

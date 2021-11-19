@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import React from 'react'
 
-import { renderWithTheme } from '../../test-util'
 import SinglePost from '../SinglePost'
+import { renderWithTheme } from '../test-util'
 
 const mockProps = {
   title: 'Blog Post 1',
@@ -21,6 +21,9 @@ describe('<SinglePost />', () => {
   it('renders post url', () => {
     renderWithTheme(<SinglePost post={mockProps} />)
 
-    expect(screen.getByText('Read More').closest('a')).toHaveAttribute('href', '/post/blog-post-one')
+    expect(screen.getByText('Read More').closest('a')).toHaveAttribute(
+      'href',
+      '/post/blog-post-one'
+    )
   })
 })

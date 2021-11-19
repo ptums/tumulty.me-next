@@ -1,7 +1,8 @@
-import ListContainer from 'components/organisms/blog/ListContainer'
-import SiteHead from 'components/shared/SiteHead'
+import SinglePost from 'components/SinglePost'
+import SiteHead from 'components/SiteHead'
 import Main from 'layouts/Main'
 import Page from 'layouts/Page'
+import Projects from 'layouts/Projects'
 import Title from 'layouts/Title'
 import React from 'react'
 import { Post } from 'types/Post'
@@ -23,7 +24,11 @@ const Blog: React.FC<Props> = ({ allPosts }: Props) => {
       <Main pageWidth="100%">
         <Title>Blog</Title>
         <Page>
-          <ListContainer allPosts={allPosts} />
+          <Projects>
+            {allPosts.map((post) => (
+              <SinglePost post={post} key={post.title} />
+            ))}
+          </Projects>
         </Page>
       </Main>
     </>

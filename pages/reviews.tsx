@@ -1,4 +1,4 @@
-import SiteHead from 'components/shared/SiteHead'
+import SiteHead from 'components/SiteHead'
 import Main from 'layouts/Main'
 import Page from 'layouts/Page'
 import Title from 'layouts/Title'

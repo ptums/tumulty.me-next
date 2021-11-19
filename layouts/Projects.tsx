@@ -1,21 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import SinglePost from 'components/molecules/SinglePost'
-import { Post } from 'types/Post'
 
 interface Props {
-  allPosts: Post[]
+  children: React.ReactNode
+}
+const Projects: React.FC<Props> = ({ children }: Props) => {
+  return <ProjectsContainer>{children}</ProjectsContainer>
 }
 
-const ListContainer: React.FC<Props> = ({ allPosts }: Props) => {
-  return (
-    <Container>
-      {allPosts.map((post) => <SinglePost post={post} key={post.title} />)}
-    </Container>
-  )
-}
-
-const Container = styled.div`
+const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
@@ -32,4 +25,4 @@ const Container = styled.div`
   }
 `
 
-export default ListContainer
+export default Projects

@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import React from 'react'
 
-import { renderWithTheme } from '../../test-util'
 import Footer from '../Footer'
+import { renderWithTheme } from '../test-util'
 
 const date = new Date()
 const year = date.getFullYear()
@@ -17,6 +17,6 @@ describe('<Footer />', () => {
   it('renders proper date', () => {
     renderWithTheme(<Footer />)
 
-    expect(screen.queryByText(`Peter Tumulty ©️ 1999`)).toBeNull();
+    expect(screen.queryByText(`Peter Tumulty ©️ 1999`)).toBeNull()
   })
 })

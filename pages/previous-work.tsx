@@ -1,9 +1,11 @@
-import Projects from 'components/organisms/previous-work/Projects'
-import SiteHead from 'components/shared/SiteHead'
+import SingleProject from 'components/SingleProject'
+import SiteHead from 'components/SiteHead'
 import Main from 'layouts/Main'
 import Page from 'layouts/Page'
+import Projects from 'layouts/Projects'
 import Title from 'layouts/Title'
 import React from 'react'
+import { PROJECTS } from 'utils/constants'
 
 const SEO = {
   title: 'Previous Work | Peter Tumulty Web Developer',
@@ -16,7 +18,11 @@ const PreviousWork = () => (
     <Main pageWidth="100%">
       <Title>Previous Work</Title>
       <Page>
-        <Projects />
+        <Projects>
+          {PROJECTS.map((project) => (
+            <SingleProject project={project} key={project.id} />
+          ))}
+        </Projects>
       </Page>
     </Main>
   </>

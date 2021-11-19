@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import React from 'react'
 
-import { renderWithTheme } from '../../../test-util'
-import Menu from '../../header/Menu'
+import { renderWithTheme } from '../../test-util'
+import Menu from '../Menu'
 
 describe('<Menu />', () => {
   it('renders menu item', () => {

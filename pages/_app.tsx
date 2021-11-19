@@ -1,11 +1,10 @@
-import React from 'react'
+import Footer from 'components/Footer'
+import Header from 'components/Header'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/global-styles'
-
-import Header from 'components/shared/Header'
-import Footer from 'components/shared/Footer'
 import theme from 'styles/theme'
 
 const SiteHead = () => (

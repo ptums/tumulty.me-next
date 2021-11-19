@@ -1,8 +1,8 @@
 import { screen } from '@testing-library/react'
 import React from 'react'
 
-import { renderWithTheme } from '../../test-util'
 import SingleProject from '../SingleProject'
+import { renderWithTheme } from '../test-util'
 
 const mockProps = {
   id: 1,
