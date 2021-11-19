@@ -26,21 +26,29 @@ const Menu = () => {
       </MenuWrapper>
       <MobileMenuWrapper>
         <Button onClick={() => setDropDown(!dropDown)}>
-          {!dropDown ? (
-            <>
-              <Close deg={45} />
-              <Close deg={-45} />
-            </>
-          ) : (
-            <>
-              <Bar />
-              <Bar />
-              <Bar />
-            </>
-          )}
+          <Bar />
+          <Bar />
+          <Bar />
         </Button>
-
-        {dropDown && <p>Dropdown menu</p>}
+        {dropDown && (
+          <DropDown>
+            {SITE_NAVS.map((nav) =>
+              nav.id === 5 ? (
+                <DropDownButton key={nav.id}>
+                  <Link href={nav.slug}>
+                    <a>{nav.label}</a>
+                  </Link>
+                </DropDownButton>
+              ) : (
+                <DropDownLink key={nav.id}>
+                  <Link href={nav.slug}>
+                    <a>{nav.label}</a>
+                  </Link>
+                </DropDownLink>
+              )
+            )}
+          </DropDown>
+        )}
       </MobileMenuWrapper>
     </nav>
   )
@@ -59,6 +67,22 @@ const Button = styled.button`
   }
 `
 
+const DropDown = styled.ul`
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 72px;
+  left: 24px;
+  background-color: ${(props) => props.theme.colors.offWhite};
+  box-shadow: ${(props) => props.theme.colors.shadowNormal};
+  min-width: 400px;
+  max-width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  z-index: 99;
+  animation: fadeIn 0.2s;
+  margin: 0;
+`
 const Bar = styled.div`
   background: ${(props) => props.theme.colors.fifthGray};
   width: 32px;
@@ -67,12 +91,6 @@ const Bar = styled.div`
   border-radius: 8px;
 `
 
-interface CloseProps {
-  deg: number
-}
-const Close = styled(Bar)<CloseProps>`
-  transform: rotate(${(props) => props.deg}deg);
-`
 const MenuWrapper = styled.ul`
   display: none;
 
@@ -129,6 +147,17 @@ const ButtonItem = styled.li`
     color: ${(props) => props.theme.colors.white};
     text-decoration: none;
   }
+`
+
+const DropDownButton = styled(ButtonItem)`
+  ${(props) => props.theme.fonts.xxxxxl};
+  height: 32px;
+`
+
+const DropDownLink = styled(MenuItem)`
+  ${(props) => props.theme.fonts.xxxxxl};
+  margin-bottom: 24px;
+  height: 48px;
 `
 
 export default Menu
