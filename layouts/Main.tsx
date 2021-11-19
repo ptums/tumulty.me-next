@@ -19,7 +19,7 @@ interface MainProps {
 
 const MainContainer = styled.main<MainProps>`
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    max-width: 100%;
+    max-width: ${(props) => props.pageWidth};
     margin: 24px auto;
   }
 `
