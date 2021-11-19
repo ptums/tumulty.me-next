@@ -3,17 +3,13 @@ import styled from 'styled-components'
 
 interface Props {
   children: React.ReactNode
-  cardMargin: string
 }
 
-const Card: React.FC<Props> = ({ children, cardMargin }: Props) => {
-  return <CardContainer cardMargin={cardMargin}>{children}</CardContainer>
+const Card: React.FC<Props> = ({ children }: Props) => {
+  return <CardContainer>{children}</CardContainer>
 }
 
-interface CardProps {
-  cardMargin: string
-}
-const CardContainer = styled.div<CardProps>`
+const CardContainer = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   border-radius: 8px;
   transition: all 0.2s;
@@ -22,7 +18,7 @@ const CardContainer = styled.div<CardProps>`
   border: 0.5px solid ${(props) => props.theme.colors.thirdGray};
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin: ${({ cardMargin }) => cardMargin}
+    margin: 24px 32px;
     width: 435px;
     max-width: 100%;
   }

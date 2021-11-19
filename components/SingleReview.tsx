@@ -11,7 +11,7 @@ const SingleReview: React.FC<Props> = ({ review }: Props) => {
   const { name, company, statement } = review
 
   return (
-    <Card cardMargin="24px 32px;">
+    <Card>
       <Statement>{statement}</Statement>
       <Person>
         {' '}

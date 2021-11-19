@@ -4,13 +4,10 @@ import React from 'react'
 import { renderWithTheme } from '../../components/test-util'
 import Card from '../Card'
 
-const mockProps = {
-  cardMargin: '24px',
-}
 describe('<Card />', () => {
   it('renders children', () => {
     renderWithTheme(
-      <Card {...mockProps}>
+      <Card>
         <p>Hello World!</p>
       </Card>
     )
