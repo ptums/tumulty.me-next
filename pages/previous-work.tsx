@@ -1,7 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import SiteHead from 'components/shared/SiteHead'
 import Projects from 'components/organisms/previous-work/Projects'
+import SiteHead from 'components/shared/SiteHead'
+import Main from 'layouts/Main'
+import Page from 'layouts/Page'
+import Title from 'layouts/Title'
+import React from 'react'
 
 const SEO = {
   title: 'Previous Work | Peter Tumulty Web Developer',
@@ -11,32 +13,13 @@ const SEO = {
 const PreviousWork = () => (
   <>
     <SiteHead {...SEO} />
-    <Main>
+    <Main pageWidth="100%">
       <Title>Previous Work</Title>
-      <PreviousWorkContainer>
+      <Page>
         <Projects />
-      </PreviousWorkContainer>
+      </Page>
     </Main>
   </>
 )
-
-const Main = styled.main`
-max-width: 100%;
-  margin: 24px auto;
-`
-const PreviousWorkContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: ${(props) => props.theme.fonts.darkGreen};
-  max-width: 100%;
-`
-
-const Title = styled.h1`
-  ${(props) => props.theme.fonts.xxxxxxl};
-  color: ${(props) => props.theme.colors.darkGreen};
-  letter-spacing: 8px;
-  margin-bottom: 3px;
-  text-align: center;
-`
 
 export default PreviousWork

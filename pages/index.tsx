@@ -1,9 +1,10 @@
-import React from 'react'
-import Image from 'next/image'
-import styled from 'styled-components'
-import SiteHead from 'components/shared/SiteHead'
 import Intro from 'components/organisms/home/Intro'
 import RowBlock from 'components/organisms/home/RowBlock'
+import SiteHead from 'components/shared/SiteHead'
+import Main from 'layouts/Main'
+import Image from 'next/image'
+import React from 'react'
+import styled from 'styled-components'
 import { CONTACTS, RECENT_STACK } from 'utils/constants'
 
 const SEO = {
@@ -14,7 +15,7 @@ const SEO = {
 const Home = () => (
   <>
     <SiteHead {...SEO} />
-    <Main>
+    <Main pageWidth="768px">
       <HomeContainer>
         <ImageContainer>
           <Image
@@ -39,10 +40,6 @@ const Home = () => (
   </>
 )
 
-const Main = styled.main`
-  max-width: 768px;
-  margin: 24px auto;
-`
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;

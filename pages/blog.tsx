@@ -1,9 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import ListContainer from 'components/organisms/blog/ListContainer'
 import SiteHead from 'components/shared/SiteHead'
-import  ListContainer from 'components/organisms/blog/ListContainer'
-import { getAllPosts } from 'utils/api'
+import Main from 'layouts/Main'
+import Page from 'layouts/Page'
+import Title from 'layouts/Title'
+import React from 'react'
 import { Post } from 'types/Post'
+import { getAllPosts } from 'utils/api'
 
 const SEO = {
   title: 'Blog | Peter Tumulty Web Developer',
@@ -18,34 +20,15 @@ const Blog: React.FC<Props> = ({ allPosts }: Props) => {
   return (
     <>
       <SiteHead {...SEO} />
-      <Main>
+      <Main pageWidth="100%">
         <Title>Blog</Title>
-        <BlogContainer>
+        <Page>
           <ListContainer allPosts={allPosts} />
-        </BlogContainer>
+        </Page>
       </Main>
     </>
   )
 }
-
-const Main = styled.main`
-  max-width: 100%;
-  margin: 24px auto;
-`
-const BlogContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: ${(props) => props.theme.fonts.darkGreen};
-  max-width: 100%;
-`
-
-const Title = styled.h1`
-  ${(props) => props.theme.fonts.xxxxxxl};
-  color: ${(props) => props.theme.colors.darkGreen};
-  letter-spacing: 8px;
-  margin-bottom: 3px;
-  text-align: center;
-`
 
 export async function getStaticProps() {
   const allPosts = getAllPosts(['title', 'slug', 'date', 'description', 'tagLine'])
