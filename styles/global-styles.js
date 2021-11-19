@@ -52,9 +52,15 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${theme.colors.whiteLowOpacity};
     border-radius: 16px;
     max-width: 1023px;
-    margin: 16px auto;
+    margin: 16px;
     min-height: 95vh;
     box-shadow: ${theme.colors.extraLargeShadow};
+  }
+
+  @media (min-width: ${theme.breakpoints.lg}) {
+    .page {
+      margin: 16px auto;
+    }
   }
 
   .fade-in {

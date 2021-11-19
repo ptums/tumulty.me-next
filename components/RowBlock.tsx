@@ -1,3 +1,4 @@
+import Card from 'layouts/Card'
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
@@ -10,7 +11,7 @@ interface Props {
 }
 const RowBlock: React.FC<Props> = ({ title, list, column }: Props) => {
   return (
-    <>
+    <Row>
       <RowTitle>{title}</RowTitle>
       {column === 1 && (
         <OneColumn>
@@ -28,10 +29,14 @@ const RowBlock: React.FC<Props> = ({ title, list, column }: Props) => {
           ))}
         </TwoColumns>
       )}
-    </>
+    </Row>
   )
 }
 
+const Row = styled(Card)`
+  padding: 0 8px !important;
+  margin: 0 !important;
+`
 const RowTitle = styled.p`
   margin-bottom: 16px;
   ${(props) => props.theme.fonts.xxxl};

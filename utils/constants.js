@@ -135,6 +135,13 @@ export const REVIEWS = [
     statement:
       'It’s so great to work with Peter. He’s a very talented developer that provides not only technical expertise, but excellent service to his clients. He works with us 1:1 to architect and build solutions and executes them in a timely matter. We lean on him for all of our web development and even custom application solutions.',
   },
+  {
+    id: 3,
+    name: 'Andrew DeHaven',
+    company: 'Developer, PWC',
+    statement:
+      'It was the pleasure of my early career as a junior web developer to have worked 1:1 with Peter. He displayed incredible patience through each step of my project and a talent for explaining complex topics in React.js. He broke down each question posed with coding examples and spent extra time making sure that the information was understood. In closing, Peter would be a great asset for any web development project no matter the size.',
+  },
   // {
   //   id: 3,
   //   name: 'Peter S. Moeller',

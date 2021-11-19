@@ -27,8 +27,6 @@ const SubTitle = styled.p`
   letter-spacing: 4px;
   font-weight: bold;
   margin: 0;
-  position: relative;
-  bottom: 6px;
 `
 
 const Excerpt = styled.p`

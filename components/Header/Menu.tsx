@@ -1,9 +1,10 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { SITE_NAVS } from 'utils/constants'
 
 const Menu = () => {
+  const [dropDown, setDropDown] = useState(false)
   return (
     <nav>
       <MenuWrapper>
@@ -23,10 +24,55 @@ const Menu = () => {
           )
         )}
       </MenuWrapper>
+      <MobileMenuWrapper>
+        <Button onClick={() => setDropDown(!dropDown)}>
+          {!dropDown ? (
+            <>
+              <Close deg={45} />
+              <Close deg={-45} />
+            </>
+          ) : (
+            <>
+              <Bar />
+              <Bar />
+              <Bar />
+            </>
+          )}
+        </Button>
+
+        {dropDown && <p>Dropdown menu</p>}
+      </MobileMenuWrapper>
     </nav>
   )
 }
 
+const Button = styled.button`
+  border: 0;
+  outline: 0;
+  background-color: ${(props) => props.theme.colors.white};
+  position: relative;
+  top: 16px;
+  right: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+const Bar = styled.div`
+  background: ${(props) => props.theme.colors.fifthGray};
+  width: 32px;
+  height: 4px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+`
+
+interface CloseProps {
+  deg: number
+}
+const Close = styled(Bar)<CloseProps>`
+  transform: rotate(${(props) => props.deg}deg);
+`
 const MenuWrapper = styled.ul`
   display: none;
 
@@ -37,6 +83,13 @@ const MenuWrapper = styled.ul`
     flex-direction: row;
     justify-content: center;
     text-align: center;
+  }
+`
+
+const MobileMenuWrapper = styled.div`
+  display: inherit;
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    display: none;
   }
 `
 
