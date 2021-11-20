@@ -1,36 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 import theme from './theme'
 
-const GlobalStyles = createGlobalStyle`
-  /** Fonts **/
-  @font-face {
-    font-family: ${theme.fonts.lato};
-    src: url('/fonts/Lato-Regular.ttf');
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: ${theme.fonts.lato};
-    src: url('/fonts/Lato-Italic.ttf');
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: ${theme.fonts.lato};
-    src: url('/fonts/Lato-Bold.ttf');
-    font-weight: 700;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: ${theme.fonts.playFairDisplay};
-    font-weight: 500;
-    src: url('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
-    font-display: swap;
-  }
-
-  
+const GlobalStyles = createGlobalStyle` 
   html {
     background: url(images/tech-6.webp) no-repeat center center fixed;
     -webkit-background-size: cover;
