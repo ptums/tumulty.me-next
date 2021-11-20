@@ -138,7 +138,7 @@ export const REVIEWS = [
   {
     id: 3,
     name: 'Andrew DeHaven',
-    company: 'Developer, PWC',
+    company: 'Developer, Appian',
     statement:
       'It was the pleasure of my early career as a junior web developer to have worked 1:1 with Peter. He displayed incredible patience through each step of my project and a talent for explaining complex topics in React.js. He broke down each question posed with coding examples and spent extra time making sure that the information was understood. In closing, Peter would be a great asset for any web development project no matter the size.',
   },
