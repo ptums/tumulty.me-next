@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
   width: 100%;
   min-height: 40px;
   background-color: ${(props) => props.theme.colors.lightGreen};
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.black};
   ${(props) => props.theme.fonts.xxxl};
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;

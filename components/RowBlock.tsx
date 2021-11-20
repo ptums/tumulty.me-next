@@ -49,7 +49,7 @@ const Card = styled.div`
 const RowTitle = styled.p`
   margin-bottom: 16px;
   ${(props) => props.theme.fonts.xxxl};
-  color: ${(props) => props.theme.colors.mediumGreen};
+  color: ${(props) => props.theme.colors.darkGreen};
   padding: 0 16px;
 `
 

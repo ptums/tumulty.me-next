@@ -41,7 +41,7 @@ const Menu = () => {
         )}
       </MenuWrapper>
       <MobileMenuWrapper ref={node}>
-        <Button open={dropDown} onClick={() => setDropDown(!dropDown)}>
+        <Button open={dropDown} onClick={() => setDropDown(!dropDown)} aria-label="mobil menu">
           <div />
           <div />
           <div />
