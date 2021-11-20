@@ -29,9 +29,7 @@ const Menu = () => {
         {SITE_NAVS.map((nav) =>
           nav.id === 5 ? (
             <ButtonItem key={nav.id}>
-              <Link href={nav.slug}>
-                <a>{nav.label}</a>
-              </Link>
+              <a href={nav.slug}>{nav.label}</a>
             </ButtonItem>
           ) : (
             <MenuItem key={nav.id}>
@@ -53,9 +51,7 @@ const Menu = () => {
             {SITE_NAVS.map((nav) =>
               nav.id === 5 ? (
                 <DropDownButton key={nav.id} onClick={() => setDropDown(!dropDown)}>
-                  <Link href={nav.slug}>
-                    <a>{nav.label}</a>
-                  </Link>
+                  <a href={nav.slug}>{nav.label}</a>
                 </DropDownButton>
               ) : (
                 <DropDownLink key={nav.id} onClick={() => setDropDown(!dropDown)}>

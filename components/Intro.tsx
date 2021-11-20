@@ -4,11 +4,15 @@ import styled from 'styled-components'
 const Intro = () => (
   <>
     <Title>Peter F. Tumulty</Title>
-    <SubTitle>Web Developer</SubTitle>
+    <SubTitle>Lead Web Developer</SubTitle>
     <Excerpt>
       Hi there! My name is Peter and I&apos;m the Owner and Lead Developer at Tumulty Web Services.
-      I am a full stack web developer based out of Brick, NJ and my favorite thing to do is build
-      software that makes an impact.
+      I am a web engineer based out of Brick, NJ and my favorite thing to do is build software that
+      makes an impact.
+    </Excerpt>
+    <Excerpt>
+      My capabilities include front-end development, JAMstack development, website architecture, web
+      performance optimization, web vitals improvement, and technical on-site SEO.
     </Excerpt>
   </>
 )
@@ -32,7 +36,7 @@ const SubTitle = styled.p`
 const Excerpt = styled.p`
   ${(props) => props.theme.fonts.xxxl};
   color: ${(props) => props.theme.colors.darkGreen};
-  margin: 36px 0;
+  margin: 24px 0;
 `
 
 export default Intro

@@ -14,6 +14,6 @@ describe('<Intro />', () => {
   it('renders sub title', () => {
     renderWithTheme(<Intro />)
 
-    expect(screen.queryByText('Web Developer')).toBeInTheDocument()
+    expect(screen.queryByText('Lead Web Developer')).toBeInTheDocument()
   })
 })

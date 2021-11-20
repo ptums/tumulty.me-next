@@ -1,6 +1,7 @@
 import Intro from 'components/Intro'
 import RowBlock from 'components/RowBlock'
 import SiteHead from 'components/SiteHead'
+import ImageWrapper from 'layouts/ImageWrapper'
 import Main from 'layouts/Main'
 import Image from 'next/image'
 import React from 'react'
@@ -17,7 +18,7 @@ const Home = () => (
     <SiteHead {...SEO} />
     <Main pageWidth="768px">
       <HomeContainer>
-        <ImageContainer>
+        <ImageWrapper>
           <Image
             src="/images/peter-face.webp"
             alt="Peter Tumulty"
@@ -25,12 +26,12 @@ const Home = () => (
             height={344}
             layout="fixed"
           />
-        </ImageContainer>
+        </ImageWrapper>
         <Details>
           <Intro />
-          <RowBlock title="You can find me @" list={CONTACTS} column={1} />
+          <RowBlock title="Connect with me" list={CONTACTS} column={1} />
           <RowBlock
-            title="Here are a few technologies I’ve been working with recently:"
+            title="A few technologies I’ve been working with recently:"
             list={RECENT_STACK}
             column={2}
           />
@@ -55,18 +56,6 @@ const HomeContainer = styled.div`
   }
 `
 
-const ImageContainer = styled.div`
-  margin: 16px;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
-    margin: 36px 0;
-  }
-  span {
-    img {
-      border-radius: 8px;
-    }
-  }
-`
 const Details = styled.div`
   margin: 16px;
 

@@ -21,7 +21,7 @@ export const SITE_NAVS = [
   },
   {
     id: 5,
-    slug: '/resume',
+    slug: '/images/PFT-Resume-2021.pdf',
     label: 'Resume',
   },
 ]
