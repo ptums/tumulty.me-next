@@ -38,7 +38,7 @@ const Title = styled.div`
 
 const Contact = styled.div`
   margin 20px 4px;
-  ${(props) => props.theme.fonts.xxxl};
+  ${(props) => props.theme.fonts.xxl};
 
   a {
     color:${(props) => props.theme.colors.darkGreen};
@@ -47,6 +47,10 @@ const Contact = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  @media(min-width:${(props) => props.theme.breakpoints.sm}) {
+    ${(props) => props.theme.fonts.xxxl};
   }
 `
 export default SiteHeader

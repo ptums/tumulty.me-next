@@ -1,10 +1,28 @@
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { SITE_NAVS } from 'utils/constants'
 
+const useOnClickOutside = (ref, handler) => {
+  useEffect(() => {
+    const listener = (event) => {
+      if (!ref.current || ref.current.contains(event.target)) {
+        return
+      }
+      handler(event)
+    }
+    document.addEventListener('mousedown', listener)
+    return () => {
+      document.removeEventListener('mousedown', listener)
+    }
+  }, [ref, handler])
+}
+
 const Menu = () => {
   const [dropDown, setDropDown] = useState(false)
+  const node = useRef(null)
+  useOnClickOutside(node, () => setDropDown(false))
+
   return (
     <nav>
       <MenuWrapper>
@@ -24,23 +42,23 @@ const Menu = () => {
           )
         )}
       </MenuWrapper>
-      <MobileMenuWrapper>
-        <Button onClick={() => setDropDown(!dropDown)}>
-          <Bar />
-          <Bar />
-          <Bar />
+      <MobileMenuWrapper ref={node}>
+        <Button open={dropDown} onClick={() => setDropDown(!dropDown)}>
+          <div />
+          <div />
+          <div />
         </Button>
         {dropDown && (
           <DropDown>
             {SITE_NAVS.map((nav) =>
               nav.id === 5 ? (
-                <DropDownButton key={nav.id}>
+                <DropDownButton key={nav.id} onClick={() => setDropDown(!dropDown)}>
                   <Link href={nav.slug}>
                     <a>{nav.label}</a>
                   </Link>
                 </DropDownButton>
               ) : (
-                <DropDownLink key={nav.id}>
+                <DropDownLink key={nav.id} onClick={() => setDropDown(!dropDown)}>
                   <Link href={nav.slug}>
                     <a>{nav.label}</a>
                   </Link>
@@ -54,41 +72,66 @@ const Menu = () => {
   )
 }
 
-const Button = styled.button`
+interface ButtonProps {
+  open: boolean
+}
+const Button = styled.button<ButtonProps>`
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
   border: 0;
-  outline: 0;
-  background-color: ${(props) => props.theme.colors.white};
-  position: relative;
-  top: 16px;
-  right: 16px;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
 
-  &:hover {
-    cursor: pointer;
+  &:focus {
+    outline: none;
   }
+
+  div {
+    width: 3rem;
+    height: 0.37rem;
+    background: ${(props) => props.theme.colors.fifthGray};
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    &:first-child {
+      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+    }
+
+    &:nth-child(2) {
+      opacity: ${({ open }) => (open ? '0' : '1')};
+      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
+    }
+
+    &:nth-child(3) {
+      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+    }
 `
 
 const DropDown = styled.ul`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   position: absolute;
-  top: 72px;
-  left: 24px;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 50%;
   background-color: ${(props) => props.theme.colors.offWhite};
   box-shadow: ${(props) => props.theme.colors.shadowNormal};
-  min-width: 400px;
-  max-width: 100%;
-  height: 400px;
   border-radius: 8px;
   z-index: 99;
-  animation: fadeIn 0.2s;
+  transition: all 0.2s linear;
   margin: 0;
-`
-const Bar = styled.div`
-  background: ${(props) => props.theme.colors.fifthGray};
-  width: 32px;
-  height: 4px;
-  margin-bottom: 8px;
-  border-radius: 8px;
 `
 
 const MenuWrapper = styled.ul`
@@ -143,6 +186,7 @@ const ButtonItem = styled.li`
   margin: 0 auto;
   list-style-type: none;
   ${(props) => props.theme.fonts.xxxl};
+
   a {
     color: ${(props) => props.theme.colors.white};
     text-decoration: none;
@@ -150,14 +194,31 @@ const ButtonItem = styled.li`
 `
 
 const DropDownButton = styled(ButtonItem)`
-  ${(props) => props.theme.fonts.xxxxxl};
-  height: 32px;
+  ${(props) => props.theme.fonts.xxxxl};
+  margin: 0;
+  @media (min-width: ${(props) => props.theme.breakpoints.sm}) {
+    ${(props) => props.theme.fonts.xxxxxl};
+    height: 32px;
+    margin: 0;
+  }
 `
 
 const DropDownLink = styled(MenuItem)`
-  ${(props) => props.theme.fonts.xxxxxl};
-  margin-bottom: 24px;
+  ${(props) => props.theme.fonts.xxxxl};
   height: 48px;
+  margin: 0;
+
+  &:first-child {
+    margin-top: 16px;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.sm}) {
+    ${(props) => props.theme.fonts.xxxxxl};
+
+    text-align: left;
+
+    margin-bottom: 8px;
+  }
 `
 
 export default Menu

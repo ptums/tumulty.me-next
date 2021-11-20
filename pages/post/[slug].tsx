@@ -34,17 +34,21 @@ const SinglePost: React.FC<Props> = ({ post }: Props) => {
 }
 
 const Date = styled.div`
-  padding: 0 148px;
+  padding: 16px;
   ${(props) => props.theme.fonts.xxxl};
   color: ${(props) => props.theme.colors.fourthGray};
   max-width: 100%;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding: 0 148px;
+  }
 `
 const BlogContainer = styled.div`
   display: flex;
   flex-direction: column;
   color: ${(props) => props.theme.colors.black};
   max-width: 100%;
-  padding: 16px 148px;
+  padding: 0 16px;
   ${(props) => props.theme.fonts.xxxxl};
 
   h1 {
@@ -63,6 +67,14 @@ const BlogContainer = styled.div`
       color: ${(props) => props.theme.colors.mediumGreen};
       font-weight: 700;
     }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    padding: 16px 148px;
   }
 `
 
