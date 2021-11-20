@@ -13,6 +13,11 @@ const PageContainer = styled.div`
   flex-direction: column;
   color: ${(props) => props.theme.fonts.darkGreen};
   max-width: 100%;
+  margin: 0 16px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin: 0 24px;
+  }
 `
 
 export default Page

@@ -46,17 +46,21 @@ const HomeContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.fonts.darkGreen};
-  min-height: 80vh;
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    min-height: 80vh;
   }
 `
 
 const ImageContainer = styled.div`
-  margin: 36px 0;
+  margin: 16px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin: 36px 0;
+  }
   span {
     img {
       border-radius: 8px;
@@ -64,7 +68,11 @@ const ImageContainer = styled.div`
   }
 `
 const Details = styled.div`
-  margin: 36px 0px 0px 64px;
+  margin: 16px;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    margin: 36px 0px 0px 64px;
+  }
 `
 
 export default Home

@@ -66,7 +66,7 @@ const OneColumn = styled.div`
 const TwoColumns = styled.div`
   ${(props) => props.theme.fonts.xxl};
   color: ${(props) => props.theme.colors.darkGreen};
-  max-height: 50px;
+
   max-width: 300px;
   display: flex;
   flex-direction: column;

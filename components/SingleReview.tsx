@@ -1,4 +1,3 @@
-import Card from 'layouts/Card'
 import React from 'react'
 import styled from 'styled-components'
 import { Review } from 'types/Review'
@@ -11,13 +10,13 @@ const SingleReview: React.FC<Props> = ({ review }: Props) => {
   const { name, company, statement } = review
 
   return (
-    <Card>
+    <>
       <Statement>{statement}</Statement>
       <Person>
         {' '}
         - {name} <Company>{company}</Company>
       </Person>
-    </Card>
+    </>
   )
 }
 
