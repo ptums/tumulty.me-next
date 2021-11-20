@@ -14,7 +14,6 @@ const CardContainer = styled.div`
   border-radius: 8px;
   transition: all 0.2s;
   max-width: 416px;
-  height: 296px;
   margin-bottom: 24px;
   border: 0.5px solid ${(props) => props.theme.colors.thirdGray};
   display: flex;
