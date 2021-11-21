@@ -55,12 +55,23 @@ const RowTitle = styled.p`
 
 const OneColumn = styled.div`
   display: flex;
+  flex-direction: column;
   ${(props) => props.theme.fonts.xxl};
   margin-bottom: 24px;
   padding: 0px 16px 0px 16px;
+
   a {
     margin-right: 16px;
+    margin-bottom: 8px;
     color: ${(props) => props.theme.colors.darkGreen};
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    flex-direction: row;
+
+    a {
+      margin-bottom: 0;
+    }
   }
 `
 const TwoColumns = styled.div`
@@ -77,6 +88,7 @@ const TwoColumns = styled.div`
     margin-bottom: 8px;
     margin-right: 8px;
   }
+
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     max-height: 120px;
 

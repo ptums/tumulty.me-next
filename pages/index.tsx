@@ -42,13 +42,9 @@ const Home = () => (
 )
 
 const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: ${(props) => props.theme.fonts.darkGreen};
-
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+    color: ${(props) => props.theme.fonts.darkGreen};
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
@@ -57,7 +53,8 @@ const HomeContainer = styled.div`
 `
 
 const Details = styled.div`
-  margin: 16px;
+  max-width: 100%;
+  padding: 0 32px;
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     margin: 36px 0px 0px 64px;
