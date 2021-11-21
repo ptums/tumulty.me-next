@@ -1,8 +1,6 @@
 # Tumulty.me
 
-A
-
-### [Live Site](https://tumulty.me)
+### [Live Site](https://tumulty.dev)
 
 ## Motivation
 
