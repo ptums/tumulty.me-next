@@ -77,7 +77,16 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740421/tumulty.me/sites/Scarinci_Hollenbeck_-_Full_Service_NJ_NY_DC_Business_Law_Firm_1.mp4',
     label: 'Scarinci Hollenbeck',
-    stack: ['Algolia', 'Bootstrap', 'Cloudinary', 'Kwes Forms', 'MySQL', 'Next.js', 'Typescript'],
+    stack: [
+      'Algolia',
+      'Bootstrap',
+      'Cloudinary',
+      'Kwes Forms',
+      'MySQL',
+      'Next.js',
+      'Restful APIs',
+      'Typescript',
+    ],
   },
   {
     id: 3,
