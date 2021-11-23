@@ -7,8 +7,8 @@ const Intro = () => (
     <SubTitle>Lead Web Developer</SubTitle>
     <Excerpt>
       Hi there! My name is Peter and I&apos;m the Owner and Lead Developer at Tumulty Web Services.
-      I am a web engineer based out of Brick, NJ and my favorite thing to do is build software that
-      makes an impact.
+      I am a web engineer with over ten years of experience and proud dog parent based out of Brick,
+      NJ and my favorite thing to do is build software that makes an impact.
     </Excerpt>
     <Excerpt>
       My capabilities include front-end development, JAMstack development, website architecture, web

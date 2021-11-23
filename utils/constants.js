@@ -69,7 +69,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740502/tumulty.me/sites/Asbury_Park_High_School_Hall_of_Fame.mp4',
     label: 'Asbury Park High School Hall of Fame',
-    stack: ['Next.js', 'Bootstrap', 'Cloudinary', 'MongoDB'],
+    stack: ['Bootstrap', 'Cloudinary', 'MongoDB', 'Next.js'],
   },
   {
     id: 2,
@@ -77,7 +77,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740421/tumulty.me/sites/Scarinci_Hollenbeck_-_Full_Service_NJ_NY_DC_Business_Law_Firm_1.mp4',
     label: 'Scarinci Hollenbeck',
-    stack: ['Next.js', 'Styled Components', 'Typescript', 'Cloudinary', 'MySQL', 'Kwes Forms'],
+    stack: ['Algolia', 'Bootstrap', 'Cloudinary', 'Kwes Forms', 'MySQL', 'Next.js', 'Typescript'],
   },
   {
     id: 3,
@@ -85,7 +85,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740967/tumulty.me/sites/Wave_Landscaping_Design__lawn_maintenance_and_design_services.mp4',
     label: 'Wave Landscaping & Design',
-    stack: ['Next.js', 'Bootstrap', 'Fauna DB'],
+    stack: ['Bootstrap', 'Fauna DB', 'Next.js'],
   },
   {
     id: 4,
@@ -93,7 +93,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740900/tumulty.me/sites/Digital_Acceleration_Summit_2021.mp4',
     label: 'Zalando Digital Summit 2021 Event',
-    stack: ['Next.js', 'Typescript', 'Tailwind.css', 'Airtable'],
+    stack: ['Airtable', 'Next.js', 'Tailwind.css', 'Typescript'],
   },
   {
     id: 5,
@@ -101,7 +101,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741431/tumulty.me/sites/Donald_Scarinci_s_Numismatics_Catalog.mp4',
     label: "Donald Scarinci's Numismatics Catalog",
-    stack: ['Next.js', 'Styled Components', 'Cloudinary', 'GraphQL'],
+    stack: ['Cloudinary', 'GraphQL', 'Next.js', 'Styled Components'],
   },
   {
     id: 6,
