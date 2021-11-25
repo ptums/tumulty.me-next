@@ -118,14 +118,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741189/tumulty.me/sites/Rachel_Peter_Wedding_Photo_Gallery.mp4',
     label: "Rachel & Peter's Wedding",
-    stack: [
-      'Cloudinary',
-      'Jest',
-      'MongoDB',
-      'Next.js',
-      'Progressive Web Application',
-      'Typescript',
-    ],
+    stack: ['Cloudinary', 'Jest', 'MongoDB', 'Next.js', 'React Testing Library', 'Typescript'],
   },
 ]
 
