@@ -81,11 +81,11 @@ export const PROJECTS = [
       'Algolia',
       'Bootstrap',
       'Cloudinary',
-      'Kwes Forms',
+      'GraphQL',
+      'Headless Wordpress',
       'MySQL',
       'Next.js',
       'Restful APIs',
-      'Typescript',
     ],
   },
   {
@@ -102,7 +102,7 @@ export const PROJECTS = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740900/tumulty.me/sites/Digital_Acceleration_Summit_2021.mp4',
     label: 'Zalando Digital Summit 2021 Event',
-    stack: ['Airtable', 'Next.js', 'Tailwind.css', 'Typescript'],
+    stack: ['Airtable', 'Next.js', 'Redux', 'Tailwind', 'Typescript'],
   },
   {
     id: 5,
@@ -119,12 +119,12 @@ export const PROJECTS = [
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741189/tumulty.me/sites/Rachel_Peter_Wedding_Photo_Gallery.mp4',
     label: "Rachel & Peter's Wedding",
     stack: [
-      'Next.js',
-      'Typescript',
       'Cloudinary',
-      'MongoDB',
       'Jest',
+      'MongoDB',
+      'Next.js',
       'Progressive Web Application',
+      'Typescript',
     ],
   },
 ]
