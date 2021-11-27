@@ -54,11 +54,13 @@ export const CONTACTS = [
 ]
 
 export const RECENT_STACK = [
-  'Typescript',
+  'Jest',
   'Next.js',
+  'React Testing Library',
+  'Styled Components',
   'Svelte',
   'Tailwind.css',
-  'Styled Components',
+  'Typescript',
   'Vercel',
 ]
 

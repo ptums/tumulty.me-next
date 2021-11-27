@@ -11,8 +11,9 @@ const Intro = () => (
       NJ and my favorite thing to do is build software that makes an impact.
     </Excerpt>
     <Excerpt>
-      My capabilities include front-end development, JAMstack development, website architecture, web
-      performance optimization, web vitals improvement, and technical on-site SEO.
+      My capabilities include front-end development, JAMstack development, mentoring junior
+      developers and recent bootcamp graduates, website architecture, web performance optimization,
+      web vitals improvement, and technical on-site SEO.
     </Excerpt>
   </>
 )
