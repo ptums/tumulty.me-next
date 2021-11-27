@@ -48,7 +48,7 @@ export const CONTACTS = [
   },
   {
     id: 5,
-    slug: 'mailto:tumultywebservices@gmail.com',
+    slug: 'mailto:ptumulty923@gmail.com',
     label: 'Email',
   },
 ]
