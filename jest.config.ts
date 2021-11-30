@@ -1,5 +1,5 @@
 const jestConfig = {
-  name: 'ScarinciHollenbeck',
+  name: 'TumultyMe',
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
 
