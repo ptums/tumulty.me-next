@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import { SITE_NAVS } from 'utils/constants'
 
-const useOnClickOutside = (ref, handler) => {
+const useOnClickOutside = (ref, handler: (e: boolean) => void) => {
   useEffect(() => {
     const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
@@ -19,8 +19,8 @@ const useOnClickOutside = (ref, handler) => {
 }
 
 const Menu = () => {
-  const [dropDown, setDropDown] = useState(false)
-  const node = useRef(null)
+  const [dropDown, setDropDown] = useState<boolean>(false)
+  const node = useRef<HTMLDivElement>(null)
   useOnClickOutside(node, () => setDropDown(false))
 
   return (

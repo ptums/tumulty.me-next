@@ -17,7 +17,6 @@ module.exports = {
     browser: true,
     jest: true,
     node: true,
-    node: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -40,7 +39,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'react-hooks/rules-of-hooks': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
     eqeqeq: 'error',
     'simple-import-sort/imports': 'error',
     'jsx-a11y/anchor-is-valid': [
