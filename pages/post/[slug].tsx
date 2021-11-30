@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import styled from 'styled-components'
-import { Post } from 'types/Post'
+import { FetchPost, Post } from 'types/Post'
 import { getAllPosts, getPostBySlug } from 'utils/api'
 
 interface Props {
@@ -79,13 +79,13 @@ const BlogContainer = styled.div`
 `
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts: FetchPost[] = getAllPosts(['slug'])
 
   return {
-    paths: posts.map((post) => {
+    paths: posts.map(({ slug }) => {
       return {
         params: {
-          slug: post.slug,
+          slug,
         },
       }
     }),
@@ -94,7 +94,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const request = getPostBySlug(params.slug, ['title', 'content', 'date', 'description'])
+  const request: FetchPost = getPostBySlug(params.slug, ['title', 'content', 'date', 'description'])
 
   return {
     props: {

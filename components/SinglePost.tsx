@@ -10,7 +10,7 @@ interface Props {
 
 const SinglePost = ({ post }: Props) => {
   const { title, slug, tagLine, description } = post
-  const postUrl = `/post${slug}`
+  const postUrl = `/post/${slug}`
 
   return (
     <Card>
