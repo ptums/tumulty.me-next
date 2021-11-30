@@ -8,7 +8,7 @@ interface Props {
   post: Post
 }
 
-const SinglePost: React.FC<Props> = ({ post }: Props) => {
+const SinglePost = ({ post }: Props) => {
   const { title, slug, tagLine, description } = post
 
   return (

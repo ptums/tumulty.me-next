@@ -7,7 +7,7 @@ interface Props {
   project: Project
 }
 
-const SingleProject: React.FC<Props> = ({ project }: Props) => {
+const SingleProject = ({ project }: Props) => {
   const { slug, video, label, stack } = project
   return (
     <>

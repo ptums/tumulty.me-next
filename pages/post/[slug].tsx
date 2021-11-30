@@ -11,7 +11,7 @@ import { getAllPosts, getPostBySlug } from 'utils/api'
 interface Props {
   post: Post
 }
-const SinglePost: React.FC<Props> = ({ post }: Props) => {
+const SinglePost = ({ post }: Props) => {
   const { content, formatDate, title, description } = post
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {

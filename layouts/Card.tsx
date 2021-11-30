@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Card: React.FC<Props> = ({ children }: Props) => {
+const Card = ({ children }: Props) => {
   return <CardContainer>{children}</CardContainer>
 }
 

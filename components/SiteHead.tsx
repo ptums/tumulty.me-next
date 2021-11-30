@@ -5,7 +5,7 @@ interface Props {
   title: string
   metaDescription: string
 }
-const SiteHead: React.FC<Props> = ({ title, metaDescription }: Props) => {
+const SiteHead = ({ title, metaDescription }: Props) => {
   return (
     <Head>
       <title>{title}</title>

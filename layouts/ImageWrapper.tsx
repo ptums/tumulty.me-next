@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const ImageWrapper: React.FC<Props> = ({ children }: Props) => {
+const ImageWrapper = ({ children }: Props) => {
   return <ImageContainer>{children}</ImageContainer>
 }
 

@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
   pageWidth: string
 }
-const Main: React.FC<Props> = ({ children, pageWidth }: Props) => {
+const Main = ({ children, pageWidth }: Props) => {
   return (
     <MainContainer pageWidth={pageWidth} className="fade-in">
       {children}

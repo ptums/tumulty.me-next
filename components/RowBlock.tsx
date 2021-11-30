@@ -8,7 +8,7 @@ interface Props {
   list: string[] | Contact[]
   column: number
 }
-const RowBlock: React.FC<Props> = ({ title, list, column }: Props) => {
+const RowBlock = ({ title, list, column }: Props) => {
   return (
     <Card>
       <RowTitle>{title}</RowTitle>

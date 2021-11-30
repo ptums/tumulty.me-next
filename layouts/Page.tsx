@@ -4,7 +4,7 @@ import styled from 'styled-components'
 interface Props {
   children: React.ReactNode
 }
-const Page: React.FC<Props> = ({ children }: Props) => {
+const Page = ({ children }: Props) => {
   return <PageContainer>{children}</PageContainer>
 }
 

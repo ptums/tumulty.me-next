@@ -6,7 +6,7 @@ interface Props {
   review: Review
 }
 
-const SingleReview: React.FC<Props> = ({ review }: Props) => {
+const SingleReview = ({ review }: Props) => {
   const { name, company, statement } = review
 
   return (

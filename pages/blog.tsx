@@ -17,7 +17,7 @@ const SEO = {
 interface Props {
   allPosts: Post[]
 }
-const Blog: React.FC<Props> = ({ allPosts }: Props) => {
+const Blog = ({ allPosts }: Props) => {
   return (
     <>
       <SiteHead {...SEO} />
