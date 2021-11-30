@@ -1,4 +1,12 @@
-export const SITE_NAVS = [
+import { Review } from '../types/Review'
+
+interface Link {
+  id: number
+  slug: string
+  label: string
+}
+
+export const SITE_NAVS: Link[] = [
   {
     id: 1,
     slug: '/',
@@ -25,7 +33,8 @@ export const SITE_NAVS = [
     label: 'Resume',
   },
 ]
-export const CONTACTS = [
+
+export const CONTACTS: Link[] = [
   {
     id: 1,
     slug: 'https://twitter.com/ptums923',
@@ -53,7 +62,7 @@ export const CONTACTS = [
   },
 ]
 
-export const RECENT_STACK = [
+export const RECENT_STACK: string[] = [
   'Jest',
   'Next.js',
   'React Testing Library',
@@ -64,7 +73,15 @@ export const RECENT_STACK = [
   'Vercel',
 ]
 
-export const PROJECTS = [
+interface Project {
+  id: number
+  slug: string
+  video: string
+  label: string
+  stack: string[]
+}
+
+export const PROJECTS: Project[] = [
   {
     id: 1,
     slug: 'https://www.aphshalloffame.com',
@@ -124,7 +141,7 @@ export const PROJECTS = [
   },
 ]
 
-export const REVIEWS = [
+export const REVIEWS: Review[] = [
   {
     id: 1,
     name: 'Salwa Khan',

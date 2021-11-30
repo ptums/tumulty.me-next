@@ -10,10 +10,11 @@ interface Props {
 
 const SinglePost = ({ post }: Props) => {
   const { title, slug, tagLine, description } = post
+  const postUrl = `/post${slug}`
 
   return (
     <Card>
-      <Link href={`/post/${slug}`}>
+      <Link href={postUrl}>
         <a>
           <Title>{title}</Title>
           <SubTitle>{tagLine}</SubTitle>
