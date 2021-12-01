@@ -1,8 +1,8 @@
 ---
 title: A light introduction to web components
-date: "2021-01-17"
-description: "What are web components? They are a set of browser APIs that give the developer the ability to create reusable customizable elements within a web application."
-tagLine: "Component based developement with browser APIs"
+date: '2021-01-17'
+description: 'What are web components? They are a set of browser APIs that give the developer the ability to create reusable customizable elements within a web application. A browser native way of designing sites in a similar way to using a JS framework.'
+tagLine: 'Component based development with browser APIs'
 tags: post
 ---
 
@@ -10,9 +10,7 @@ tags: post
 
 ## What are web components? They are a set of browser APIs that give the developer the ability to create reusable customizable elements within a web application.
 
-
 ![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/v1637273811/tumulty.me/tekton-SVpCSOCcCwA-unsplash_1.jpg)
-
 
 Source material for this post
 
@@ -23,7 +21,7 @@ Source material for this post
 
 ### From a Birds-eye view
 
-One of the main reasons developers flock to frameworks like [React.js](https://reactjs.org/) or [Vue.js](https://vue.org) is because they 10x site development by allowing the developer to reuse different aspects of a website in different areas. Great example is a button. In one of these frameworks, a developer can code out the style and functionality of a button and then have the ability to splatter it in as many areas of the website they desire. 
+One of the main reasons developers flock to frameworks like [React.js](https://reactjs.org/) or [Vue.js](https://vue.org) is because they 10x site development by allowing the developer to reuse different aspects of a website in different areas. Great example is a button. In one of these frameworks, a developer can code out the style and functionality of a button and then have the ability to splatter it in as many areas of the website they desire.
 
 Until now achieving something like this natively using basic HTML & JavaScript was nearly impossible...
 
@@ -100,17 +98,17 @@ Also, the Shadow DOM actually has been around for quite a while. An excellent ex
 
 To implement the shadow DOM, you use the `Element.attachShadow()` method, which takes in one parameter. The parameter is the option to either open or close the Shadow DOM.
 
-To open 
+To open
 
 ```
 Element.attachShadow({ mode: open })
 ```
 
- To close 
- 
- ```
- Element.attachShadow({ mode: closed })
- ```
+To close
+
+```
+Element.attachShadow({ mode: closed })
+```
 
 To apply the { mode: open }, to the method means that you can now access and write could to the Shadow DOM. If you were thinking `{ mode: closed }` prohibits that ability, you'd be correct.
 

@@ -1,16 +1,16 @@
 ---
-title: Testing form inputs with React Testing Library and Typescript
+title: Wrap your code in battle armor with  React Testing Library and Typescript
 date: '2021-11-31'
 description: 'What are web components? They are a set of browser APIs that give the developer the ability to create reusable customizable elements within a web application.'
-tagLine: 'Component based developement with browser APIs'
+tagLine: 'Text input element with Typescript and React Testing Library'
 tags: post
 ---
 
-# Testing form inputs with React Testing Library and Typescript
+# Wrap your code in battle armor with React Testing Library and Typescript
 
-## Writing tests always start simple and generally blow out when the component grows. One component that I find proliferates is a text input component. So I'd like to share where I usually begin writing tests for a form input with React Testing Library and Typescript.
+## In this post, I provide a light introduction on using Typescript and React Testing Library to improve the code quality of a simple text input element.
 
-![A light introduction to web components]https://res.cloudinary.com/tumulty-web-services/image/upload/v1638304405/tumulty.me/typescript-react-testing-cover.webp)
+![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/v1638304405/tumulty.me/typescript-react-testing-cover.webp)
 
 So first things first, let's take a look at the component I'm going to test.
 
@@ -98,7 +98,7 @@ import { fireEvent, screen, render } from '@testing-library/react'
 import FormInput from './FormInput.tsx'
 ```
 
-We are loading in two functions from React Testing Library `'@testing-library/react'` to write the tests. The first one is `fireEvent` this class contains a family of methods that will help us mimic DOM changes in the component. The second one is `screen,` a class that includes a family of methods that allow us to probe what's being rendered by the component in the DOM. The third one is `render`, which is a function that takes in the component as an argument and appendends it to the DOM.
+We are loading in two functions from React Testing Library `'@testing-library/react'` to write the tests. The first one is `fireEvent` this class contains a family of methods that will help us mimic DOM changes in the component. The second one is `screen,` a class that includes a family of methods that allow us to probe what's being rendered by the component in the DOM. The third one is `render`, which is a function that takes in the component as an argument and appends it to the DOM.
 
 Below that we are loading in the component, how else are we going to test it?
 
@@ -115,7 +115,7 @@ const mockProps = {
 
 Some things look familiar, right? Our `mockProps` is an object with properties we've seen before. We are recreating an example of properties used by the `<FormInput/>` component. You'll notice that keys all match the data type described in the components interface.
 
-One thing that may not make sense is `jest.fn()`. We need to set `handleOnChange` to some function for the input element to use. The `jest.fn()` is a mock function from the Jest library that is designed to mimic the interfaction of a function executation.
+One thing that may not make sense is `jest.fn()`. We need to set `handleOnChange` to some function for the input element to use. The `jest.fn()` is a mock function from the Jest library that is designed to mimic the interaction of a function execution.
 
 **The setup is now over, let's start with writing a test**
 
@@ -187,7 +187,7 @@ Since render() created the input element with our properties, what we are testin
 
 Now that we set this input element, we can operate on it and make sure it works the way it was intended too.
 
-The next line is pretty cool . `fireEvent.change(input, { target: { value: 'Hello!' } })` is mimicking someone typing into the input the words "Hello!". It's essentially a small bot recreating how an actual person will use the input. `FireEevent`, as I mentioned before comes from the React Testing Library and `.change()` is one of the many methods coming from `fireEvent`.
+The next line is pretty cool . `fireEvent.change(input, { target: { value: 'Hello!' } })` is mimicking someone typing into the input the words "Hello!". It's essentially a small bot recreating how an actual person will use the input. `FireEvent`, as I mentioned before comes from the React Testing Library and `.change()` is one of the many methods coming from `fireEvent`.
 
 The `.change()` method takes in two arguments. The first argument is the element we want to mimic the changes, and in this case, we want to do it on the form element, the `input` variable. The second argument is what we should change the value to, which is the value we passed into the component 'Hello!'.
 
@@ -210,7 +210,7 @@ So in the world of the test, `fullName` is `{ target: { value: 'Hello!' } }` and
 
 The final line, `expect((input as HTMLInputElement).value).toBe('Hello!')` is checking if the change we set up works properly. The function `except()` takes in two arguments. The first one is the element we want to check and the second argument is what we expect the outcome to be.
 
-In this case the first argument is `(input as HTMLInputElement).value`, this is a bit more complex since this line is using Typescript. If it were just JavaScript the first agrument would be `input.value`. So lets' take a closer look at `(input as HTMLInputElement)`.
+In this case the first argument is `(input as HTMLInputElement).value`, this is a bit more complex since this line is using Typescript. If it were just JavaScript the first argument would be `input.value`. So lets' take a closer look at `(input as HTMLInputElement)`.
 
 [The 'as' keyword in TypeScript](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) is a way for us to convert the type of an element to a more specific element. By default `input` would be `HTMLElement`, which has a long list of characteristics, but none of the are `.value`, so we need to get more specific on the type of HTMLElement we are using. By changing `input` to `(input as HTMLInputElement)` we are staging that this element needs to take on the common attributes of an input element.
 
