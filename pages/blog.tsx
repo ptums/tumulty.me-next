@@ -5,7 +5,7 @@ import Page from 'layouts/Page'
 import Projects from 'layouts/Projects'
 import Title from 'layouts/Title'
 import React from 'react'
-import { Post } from 'types/Post'
+import { FetchPost, Post } from 'types/Post'
 import { getAllPosts } from 'utils/api'
 
 const SEO = {
@@ -36,7 +36,11 @@ const Blog = ({ allPosts }: Props) => {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['title', 'slug', 'date', 'description', 'tagLine'])
+  const getPosts = getAllPosts(['title', 'slug', 'date', 'description', 'tagLine'])
+
+  const allPosts: FetchPost[] = [...getPosts].sort((a, b) =>
+    new Date(a.date) < new Date(b.date) ? 1 : -1
+  )
 
   return {
     props: { allPosts },

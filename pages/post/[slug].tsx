@@ -69,6 +69,15 @@ const BlogContainer = styled.div`
     }
   }
 
+  p {
+    code {
+      color: ${(props) => props.theme.colors.black};
+      padding: 0 2px;
+      background-color: ${(props) => props.theme.colors.gray};
+      ${(props) => props.theme.fonts.xxxl};
+    }
+  }
+
   img {
     max-width: 100%;
   }
