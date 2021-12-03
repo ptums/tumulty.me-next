@@ -10,7 +10,7 @@ tags: post
 
 ## In this post, I provide a hefty overview on using Typescript and React Testing Library to improve the code quality of a dynamic input element component.
 
-![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/v1638304405/tumulty.me/Typescript-react-testing-cover.webp)
+![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/v1638490898/tumulty.me/code-snippet-cover.webp)
 
 To get started, let's take a look at the component I'm going to test.
 
