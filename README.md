@@ -18,5 +18,5 @@ Wanted to create blogfolio that pulled in my work, my blog posts, and resume int
 
 ## To Do
 
-- Replace CSS animation for framer motion
-- Add tests and snapshots for all pages and components
+- Replace CSS animations with Framer Motion
+- Finish writing tests for all pages and components

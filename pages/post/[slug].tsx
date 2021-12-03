@@ -11,6 +11,7 @@ import { getAllPosts, getPostBySlug } from 'utils/api'
 interface Props {
   post: Post
 }
+
 const SinglePost = ({ post }: Props) => {
   const { content, formatDate, title, description } = post
   const router = useRouter()
@@ -62,6 +63,7 @@ const BlogContainer = styled.div`
     background-color: ${(props) => props.theme.colors.gray};
     padding: 16px;
     ${(props) => props.theme.fonts.xxxl};
+    white-space: pre-wrap;
 
     code {
       color: ${(props) => props.theme.colors.mediumGreen};
