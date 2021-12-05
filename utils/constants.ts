@@ -64,7 +64,7 @@ export const CONTACTS: Link[] = [
 
 export const RECENT_STACK: string[] = [
   'Jest',
-  'Next.js',
+  'Next',
   'React Testing Library',
   'Styled Components',
   'Svelte',
@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740502/tumulty.me/sites/Asbury_Park_High_School_Hall_of_Fame.mp4',
     label: 'Asbury Park High School Hall of Fame',
-    stack: ['Bootstrap', 'Cloudinary', 'MongoDB', 'Next.js'],
+    stack: ['Bootstrap', 'Cloudinary', 'MongoDB', 'Next'],
   },
   {
     id: 2,
@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
       'GraphQL',
       'Headless Wordpress',
       'MySQL',
-      'Next.js',
+      'Next',
       'Restful APIs',
     ],
   },
@@ -113,7 +113,18 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740967/tumulty.me/sites/Wave_Landscaping_Design__lawn_maintenance_and_design_services.mp4',
     label: 'Wave Landscaping & Design',
-    stack: ['Bootstrap', 'Fauna DB', 'Next.js'],
+    stack: [
+      'Cloudinary',
+      'Jest',
+      'Next',
+      'Framer Motion',
+      'GraphCMS',
+      'GraphQL',
+      'React Testing Library',
+      'Tailwind',
+      'Twilio/Send Grid',
+      'Typescript',
+    ],
   },
   {
     id: 4,
@@ -121,7 +132,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740900/tumulty.me/sites/Digital_Acceleration_Summit_2021.mp4',
     label: 'Zalando Digital Summit 2021 Event',
-    stack: ['Airtable', 'Next.js', 'Redux', 'Tailwind', 'Typescript'],
+    stack: ['Airtable', 'Next', 'Redux', 'Tailwind', 'Typescript'],
   },
   {
     id: 5,
@@ -129,7 +140,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741431/tumulty.me/sites/Donald_Scarinci_s_Numismatics_Catalog.mp4',
     label: "Donald Scarinci's Numismatics Catalog",
-    stack: ['Cloudinary', 'GraphQL', 'Next.js', 'Styled Components'],
+    stack: ['Cloudinary', 'GraphQL', 'Next', 'Styled Components'],
   },
   {
     id: 6,
@@ -137,7 +148,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741189/tumulty.me/sites/Rachel_Peter_Wedding_Photo_Gallery.mp4',
     label: "Rachel & Peter's Wedding",
-    stack: ['Cloudinary', 'Jest', 'MongoDB', 'Next.js', 'React Testing Library', 'Typescript'],
+    stack: ['Cloudinary', 'Jest', 'MongoDB', 'Next', 'React Testing Library', 'Typescript'],
   },
 ]
 
