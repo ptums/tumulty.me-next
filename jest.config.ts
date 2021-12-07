@@ -11,7 +11,8 @@ const jestConfig = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}', // include JavaScript and TypeScript (w/ JSX)
+    'pages/**/*.{js,jsx,ts,tsx}', // include JavaScript and TypeScript (w/ JSX)
+    'components/**/*.{js,jsx,ts,tsx}', // include JavaScript and TypeScript (w/ JSX)
     '!**/*.config.{js,ts}', // ignore config files
     '!**/.*rc.js', // ignore eslint and babelrc
     '!**/*.d.ts', // ignore TypeScript types files
