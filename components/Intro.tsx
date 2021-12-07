@@ -6,9 +6,9 @@ const Intro = () => (
     <Title>Peter F. Tumulty</Title>
     <SubTitle>Lead Web Developer</SubTitle>
     <Excerpt>
-      Hi there! My name is Peter and I&apos;m the owner and lead developer at Tumulty Web Services.
-      I am a web engineer with over ten years of experience and proud dog parent based out of Brick,
-      NJ and my favorite thing to do is build software that makes an impact.
+      Hi there! My name is Peter, and I&apos;m the owner and lead developer at Tumulty Web Services.
+      I am a web engineer with over ten years of experience and a proud dog parent based out of
+      Brick, NJ and my favorite thing to do is build software that makes an impact.
     </Excerpt>
     <Excerpt>
       My capabilities include front-end development, JAMstack development, mentoring junior
