@@ -181,4 +181,11 @@ export const REVIEWS: Review[] = [
     statement:
       "Peter is a high level professional, calm under pressure, extremely detailed, and produces nothing but excellent results. I've had the pleasure of working with Peter for more than eight years. He has created and recreated more than a dozen websites, applications, and countless custom widgets as well as managed large projects from start to finish. He is always my go to for any web development projects. I highly recommend Peter and would recommend to hire.",
   },
+  {
+    id: 5,
+    name: 'Ahmed F. Haque',
+    company: 'Chief Product Officer at Emeritus',
+    statement:
+      "Undoubtedly Peter is a skilled developer, yet more importantly he is an unbelievably kind human being. He's full of wisdom, optimism, and a sincere desire to help those around him. I can't say enough good things about him, except to say that I hope he knows just how much of an impact he has made on the lives of others.",
+  },
 ]
