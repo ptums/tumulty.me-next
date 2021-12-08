@@ -1,8 +1,8 @@
 ---
 title: Wrap your component in battle armor with  React Testing Library and Typescript
 date: '2021-11-31'
-description: 'What are web components? They are a set of browser APIs that give the developer the ability to create reusable customizable elements within a web application.'
-tagLine: 'Text input element with Typescript and React Testing Library'
+description: Here's a hefty overview on using Typescript and React Testing Library to improve the code quality of a dynamic input element component.
+tagLine: Preparing a dynamic text element input against  both developers and users
 tags: post
 ---
 
