@@ -1,4 +1,4 @@
 {
   "jest.jestCommandLine": "yarn test",
-  "cSpell.words": ["Cloudinary", "Twilio"]
+  "cSpell.words": ["bizist", "Cloudinary", "logrocket", "msapplication", "Twilio"]
 }
