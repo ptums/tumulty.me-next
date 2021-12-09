@@ -4,10 +4,17 @@ import LogRocket from 'logrocket'
 import setupLogRocketReact from 'logrocket-react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/global-styles'
 import theme from 'styles/theme'
+
+const pageview = (url) => {
+  window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
+    page_path: url,
+  })
+}
 
 const SiteHead = () => (
   <>
@@ -39,8 +46,24 @@ const SiteHead = () => (
 )
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter()
+
+  /** Log Rocket config */
   LogRocket.init('bizist/tumulydev')
   setupLogRocketReact(LogRocket)
+
+  // effect handler to manage route changes for GA
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      pageview(url)
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     <>
