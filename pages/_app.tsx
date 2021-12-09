@@ -4,7 +4,6 @@ import LogRocket from 'logrocket'
 import setupLogRocketReact from 'logrocket-react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import Script from 'next/script'
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/global-styles'
@@ -36,11 +35,6 @@ const SiteHead = () => (
       <meta name="msapplication-TileImage" content="/icons/ms-icon-144x144.png" />
       <meta name="theme-color" content="#ffffff" />
     </Head>
-    <Script
-      strategy="lazyOnload"
-      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
-    />
-    <Script id="ga-analytics">{` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}');`}</Script>
   </>
 )
 
