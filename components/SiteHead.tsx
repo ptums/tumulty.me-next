@@ -16,7 +16,7 @@ const SiteHead = ({ title, metaDescription }: Props) => {
   const slug = router.asPath
   const currentUrl = SITE_URL + slug
 
-  const structuredData = `{"@context":"https://schema.org/","@type":"WebSite","name":${title},"url":${SITE_URL},"potentialAction":{"@type":"SearchAction","target":"{search_term_string}","query-input":"required name=search_term_string"}}`
+  const structuredData = `{"@context":"https://schema.org/","@type":"WebSite","name":"${title}","url":"${SITE_URL}","potentialAction":{"@type":"SearchAction","target":"{search_term_string}","query-input":"required name=search_term_string"}}`
 
   return (
     <>
