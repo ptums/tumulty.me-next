@@ -2,19 +2,14 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import LogRocket from 'logrocket'
 import setupLogRocketReact from 'logrocket-react'
-import { AppProps } from 'next/app'
+import { AppProps, NextWebVitalsMetric } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from 'styles/global-styles'
 import theme from 'styles/theme'
-
-const pageview = (url) => {
-  window.gtag('config', process.env.NEXT_PUBLIC_GA_TRACKING_ID, {
-    page_path: url,
-  })
-}
+import { pageview } from 'utils/gtag'
 
 const SiteHead = () => (
   <>

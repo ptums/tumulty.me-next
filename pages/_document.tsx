@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import React from 'react'
 import { ServerStyleSheet } from 'styled-components'
+import { GTAG_TRACKING } from 'utils/constants'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -39,6 +41,19 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;700&display=swap"
             rel="stylesheet"
+          />
+          <script src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_TRACKING}`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GTAG_TRACKING}', {
+                page_path: window.location.pathname,
+              });
+        `,
+            }}
           />
         </Head>
         <body>

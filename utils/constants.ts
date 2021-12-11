@@ -189,3 +189,5 @@ export const REVIEWS: Review[] = [
       "Undoubtedly Peter is a skilled developer, yet more importantly he is an unbelievably kind human being. He's full of wisdom, optimism, and a sincere desire to help those around him. I can't say enough good things about him, except to say that I hope he knows just how much of an impact he has made on the lives of others.",
   },
 ]
+
+export const GTAG_TRACKING = process.env.NEXT_PUBLIC_GA_TRACKING_ID
