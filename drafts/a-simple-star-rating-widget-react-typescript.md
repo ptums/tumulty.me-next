@@ -16,5 +16,4 @@ If you are like, what the heck is a star rating widget? Here's a link to what I 
 
 And if you want to skip my prose and need an example of how to build one of these bad boys, here's the [Code Sandbox](https://codesandbox.io/s/recursing-smoke-phgvp).
 
-Talk about Vite
 Then walk through the file
