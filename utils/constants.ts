@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740502/tumulty.me/sites/Asbury_Park_High_School_Hall_of_Fame.mp4',
     label: 'Asbury Park High School Hall of Fame',
-    stack: ['Bootstrap', 'Cloudinary', 'MongoDB', 'Next'],
+    stack: ['React-Bootstrap', 'Cloudinary', 'MongoDB', 'Next'],
   },
   {
     id: 2,
@@ -128,6 +128,24 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
+    slug: 'https://www.unleashedpotentiallifecoaching.com/',
+    video:
+      'https://res.cloudinary.com/tumulty-web-services/video/upload/v1643674625/tumulty.me/Unleashed_Potential__Life_Coaching.mp4',
+    label: 'Unleashed Potential Life Coaching',
+    stack: [
+      'Cloudinary',
+      'Jest',
+      'Next',
+      'Framer Motion',
+      'GraphQL',
+      'Prismic.io',
+      'Tailwind',
+      'Twilio/Send Grid',
+      'Typescript',
+    ],
+  },
+  {
+    id: 5,
     slug: 'https://zalando.vercel.app',
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740900/tumulty.me/sites/Digital_Acceleration_Summit_2021.mp4',
@@ -135,7 +153,7 @@ export const PROJECTS: Project[] = [
     stack: ['Airtable', 'Next', 'Redux', 'Tailwind', 'Typescript'],
   },
   {
-    id: 5,
+    id: 6,
     slug: 'https://numismatics-catalog.donaldscarinci.com',
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741431/tumulty.me/sites/Donald_Scarinci_s_Numismatics_Catalog.mp4',
@@ -143,7 +161,7 @@ export const PROJECTS: Project[] = [
     stack: ['Cloudinary', 'GraphQL', 'Next', 'Styled Components'],
   },
   {
-    id: 6,
+    id: 7,
     slug: 'https://rachelandpetertumultywedding.com/',
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636741189/tumulty.me/sites/Rachel_Peter_Wedding_Photo_Gallery.mp4',
