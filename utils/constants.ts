@@ -134,7 +134,6 @@ export const PROJECTS: Project[] = [
     label: 'Unleashed Potential Life Coaching',
     stack: [
       'Cloudinary',
-      'Jest',
       'Next',
       'Framer Motion',
       'GraphQL',
