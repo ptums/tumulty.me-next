@@ -1,4 +1,5 @@
 module.exports = {
+  productionBrowserSourceMaps: true,
   image: {
     minimumCacheTTL: 60 * 60 * 5,
     deviceSizes: [640, 768, 1024, 1280, 1536],
