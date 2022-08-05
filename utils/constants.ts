@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 2,
-    slug: 'https://scarincihollenbeck.com',
+    slug: 'https://scarincihollenbeck-frontend-cc.vercel.app',
     video:
       'https://res.cloudinary.com/tumulty-web-services/video/upload/v1636740421/tumulty.me/sites/Scarinci_Hollenbeck_-_Full_Service_NJ_NY_DC_Business_Law_Firm_1.mp4',
     label: 'Scarinci Hollenbeck',
