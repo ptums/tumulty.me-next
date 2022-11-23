@@ -1,16 +1,16 @@
 ---
 title: The pieces that make up browser caching
-date: "2021-02-10"
+date: '2021-02-10'
 description: "To start learning to love and understand caching, let's take a look at it's pieces and what sort of problems caching is trying to solve when it comes to user asking for a web page."
-tagLine: "Stop hating brower cache and learn to love it!"
+tagLine: 'Stop hating brower cache and learn to love it!'
 tags: post
 ---
 
 # The pieces that make up browser caching
+
 ## To start learning to love and understand caching, let's take a look at it's pieces.
 
 ![A light introduction to web components](https://res.cloudinary.com/tumulty-web-services/image/upload/c_scale,w_750/v1630949949/tumulty.me/legos.jpg)
-
 
 ### Where to begin? Well what problem is caching trying to solve?
 
@@ -24,7 +24,7 @@ Before I go into caching I'd like to mention a few facts on [requesting web page
 - You'll wait for your page to load until all essential resources and contents have been requested
 - Having a poor network connection makes this entire process much more difficult
 
-And,  caching is a feature built into the browser that helps manage these issues with pages that have loads of content.
+And, caching is a feature built into the browser that helps manage these issues with pages that have loads of content.
 
 ### The pieces that make up browser caching
 

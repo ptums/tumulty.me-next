@@ -17,7 +17,7 @@ When I started programming, relying on the global space seemed like the most sen
 
 Think of any big website — let’s use Amazon for example. If the developers of that site stored all their variables globally, their code would take up hundreds of lines of the code base and drastically slow down the site.
 
-*"Global scopes can be slow, because each time a function executes, it cause a temporary calling scope to be created. JavaScript searchers for the first item in the scope chain, and if it doesn’t find the variable, it swells up the chain until it hits the global object."* 
+_"Global scopes can be slow, because each time a function executes, it cause a temporary calling scope to be created. JavaScript searchers for the first item in the scope chain, and if it doesn’t find the variable, it swells up the chain until it hits the global object."_
 
 [http://www.monitis.com/blog/30-tips-to-improve-javascript-performance/](http://www.monitis.com/blog/30-tips-to-improve-javascript-performance/)
 
@@ -44,11 +44,9 @@ var phraseThree = "After";
 var phraseFour = "Coffee";
 ```
 
-
 Our goal is to have access to these variables while still keeping them out of the global space.
 
 Here's how it is done.
-
 
 ```
 /* I define a variable that is going to run an
@@ -60,9 +58,9 @@ Here's how it is done.
   }());
 ```
 
-*Quick background: What we are setting up here is called a module, which is like a “class” in JavaScript. Using a module protects the code from being accessed from the outside and while allowing us to set up public and private variables and functions on the inside.*
+_Quick background: What we are setting up here is called a module, which is like a “class” in JavaScript. Using a module protects the code from being accessed from the outside and while allowing us to set up public and private variables and functions on the inside._
 
-The *immediately-invoked-function-expression* does exactly what the name suggests, it automatically initializes itself when the script is called. By setting the *immediately-invoked-function-expression* to a variable we are turning it into a module.
+The _immediately-invoked-function-expression_ does exactly what the name suggests, it automatically initializes itself when the script is called. By setting the _immediately-invoked-function-expression_ to a variable we are turning it into a module.
 
 **This is what sets us free from the global space!**
 
@@ -79,7 +77,7 @@ var coffeeProgram = (function () {
 }());
 ```
 
-If we tried running *console.log(coffeeProgram.phraseOne);* our browser would return an error that looks something like this.
+If we tried running _console.log(coffeeProgram.phraseOne);_ our browser would return an error that looks something like this.
 
 ```
 Uncaught TypeError: Cannot read property 'phraseOne' of undefined at
@@ -120,10 +118,11 @@ var coffeeProgram = (function () {
     };
 }());
 ```
-Notice that return is an object; we can assign our private variables to its keys. Here, I created a key called phraseOne and set the value to our private variable *phraseOne.*
 
-Now when we can *console.log(coffeeProgram.phraseOne);* and instead of an error we will get "Life".
+Notice that return is an object; we can assign our private variables to its keys. Here, I created a key called phraseOne and set the value to our private variable _phraseOne._
 
-So, we did it! If we continue to put all our code inside the *coffeeProgram* module we are totally free of the global space and still have access to our variables. From this point onward you can completely avoid the global space.
+Now when we can _console.log(coffeeProgram.phraseOne);_ and instead of an error we will get "Life".
 
-*This post was original published on [Medium.com](https://medium.com/@petertumulty/avoiding-the-global-scope-with-the-revealing-module-pattern-6796ae7af1b9)*
+So, we did it! If we continue to put all our code inside the _coffeeProgram_ module we are totally free of the global space and still have access to our variables. From this point onward you can completely avoid the global space.
+
+_This post was original published on [Medium.com](https://medium.com/@petertumulty/avoiding-the-global-scope-with-the-revealing-module-pattern-6796ae7af1b9)_

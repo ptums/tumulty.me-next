@@ -13,24 +13,22 @@ const SingleProject = ({ project }: Props) => {
     <>
       <Card>
         <Link href={slug}>
-          <a>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
             <video class="graphic-container mobile-video" autoplay = "true" muted = "true" playsinline = "true" loop = "true" >
               <source src=${video} type="video/mp4" />
             </video>
           `,
-              }}
-            />
-            <Description>
-              <Title>{label}</Title>
-              <Stack>
-                <strong>Stack: </strong>
-                <StackItem>{stack.join(', ')}</StackItem>
-              </Stack>
-            </Description>
-          </a>
+            }}
+          />
+          <Description>
+            <Title>{label}</Title>
+            <Stack>
+              <strong>Stack: </strong>
+              <StackItem>{stack.join(', ')}</StackItem>
+            </Stack>
+          </Description>
         </Link>
       </Card>
     </>

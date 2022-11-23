@@ -1,5 +1,5 @@
 export interface Contact {
-  id: number;
-  slug: string;
-  label: string;
+  id: number
+  slug: string
+  label: string
 }

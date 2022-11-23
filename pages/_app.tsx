@@ -1,8 +1,6 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
-import LogRocket from 'logrocket'
-import setupLogRocketReact from 'logrocket-react'
-import { AppProps, NextWebVitalsMetric } from 'next/app'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
@@ -42,10 +40,6 @@ const SiteHead = () => (
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
-
-  /** Log Rocket config */
-  LogRocket.init('bizist/tumulydev')
-  setupLogRocketReact(LogRocket)
 
   // effect handler to manage route changes for GA
   useEffect(() => {

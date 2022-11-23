@@ -1,8 +1,9 @@
-import Card from 'layouts/Card'
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 import { Post } from 'types/Post'
+
+import Card from '../layouts/Card'
 
 interface Props {
   post: Post
@@ -15,12 +16,10 @@ const SinglePost = ({ post }: Props) => {
   return (
     <Card>
       <Link href={postUrl}>
-        <a>
-          <Title>{title}</Title>
-          <SubTitle>{tagLine}</SubTitle>
-          <Description>{description}</Description>
-          <ButtonLink>Read More</ButtonLink>
-        </a>
+        <Title>{title}</Title>
+        <SubTitle>{tagLine}</SubTitle>
+        <Description>{description}</Description>
+        <ButtonLink>Read More</ButtonLink>
       </Link>
     </Card>
   )
