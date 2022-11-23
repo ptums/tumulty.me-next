@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react'
 import React from 'react'
 
 import { renderWithTheme } from '../../test-util'
-import Header from '..'
+import Header from '../index'
 
 describe('<Header />', () => {
   it('renders name', () => {

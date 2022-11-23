@@ -33,7 +33,7 @@ describe('<RowBlock/>', () => {
   it('renders a single column', () => {
     renderWithTheme(<RowBlock {...mockProps} />)
 
-    expect(screen.getByText('Twitter').closest('a')).toHaveAttribute('href', '/twitter.com')
+    expect(screen.getByText('Twitter').closest('a')).toHaveAttribute('href', 'twitter.com')
   })
 
   it('renders double column', () => {

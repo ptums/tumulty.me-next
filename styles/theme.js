@@ -25,7 +25,7 @@ const colors = {
   pureBlack: '#000000',
   white: '#fff',
   offWhite: '#fcfaff',
-  whiteLowOpacity: 'rgba(255, 255, 255, 0.75)',  
+  whiteLowOpacity: 'rgba(255, 255, 255, 0.75)',
   gray: '#e9e9e9',
   secondaryGray: '#dee2e6',
   thirdGray: '#ced4da',
@@ -38,7 +38,8 @@ const colors = {
   shadowNormal: '0 5px 10px 0 rgba(138, 155, 165, 0.15)',
   shadowLight: '0 .5rem 1rem rgba(0,0,0,.15)!important',
   shadowDark: '0 0.33207px 2.21381px rgb(0 0 0 / 1%), 0 0.79801px 5.32008px rgb(0 0 0 / 3%)',
-  extraLargeShadow: '0 0.33207px 2.21381px rgb(0 0 0 / 1%), 0 0.79801px 5.32008px rgb(0 0 0 / 3%), 0 1.50259px 10.0172px rgb(0 0 0 / 4%), 0 2.68036px 17.869px rgb(0 0 0 / 5%), 0 5.01331px 33.4221px rgb(0 0 0 / 6%), 0 12px 80px rgb(0 0 0 / 9%)'
+  extraLargeShadow:
+    '0 0.33207px 2.21381px rgb(0 0 0 / 1%), 0 0.79801px 5.32008px rgb(0 0 0 / 3%), 0 1.50259px 10.0172px rgb(0 0 0 / 4%), 0 2.68036px 17.869px rgb(0 0 0 / 5%), 0 5.01331px 33.4221px rgb(0 0 0 / 6%), 0 12px 80px rgb(0 0 0 / 9%)',
 }
 
 const breakpoints = {

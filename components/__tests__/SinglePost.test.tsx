@@ -6,7 +6,7 @@ import { renderWithTheme } from '../test-util'
 
 const mockProps = {
   title: 'Blog Post 1',
-  slug: '/blog-post-one',
+  slug: 'blog-post-one',
   tagLine: '...',
   description: '...',
 }

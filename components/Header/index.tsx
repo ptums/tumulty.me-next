@@ -1,22 +1,15 @@
-import Menu from 'components/Header/Menu'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import styled from 'styled-components'
 
+import Menu from './Menu'
+
 const SiteHeader = () => (
   <Header>
     <Title>
       <Link href="/">
-        <a>
-          <Image
-            src="/images/badge.svg"
-            alt="Tumulty Web Services"
-            width={62}
-            height={62}
-            layout="intrinsic"
-          />
-        </a>
+        <Image src="/images/badge.svg" alt="Tumulty Web Services" width={62} height={62} />
       </Link>
       <Contact>
         <a href="mailto:ptumulty923@gmail.com">ptumulty923@gmail.com</a>

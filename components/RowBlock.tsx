@@ -16,7 +16,7 @@ const RowBlock = ({ title, list, column }: Props) => {
         <OneColumn>
           {list.map((item) => (
             <Link href={item.slug} key={item.id}>
-              <a>{item.label}</a>
+              {item.label}
             </Link>
           ))}
         </OneColumn>

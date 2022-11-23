@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
-import { SITE_NAVS } from 'utils/constants'
+
+import { SITE_NAVS } from '../../utils/constants'
 
 const useOnClickOutside = (ref, handler: (e: boolean) => void) => {
   useEffect(() => {
@@ -33,9 +34,7 @@ const Menu = () => {
             </ButtonItem>
           ) : (
             <MenuItem key={nav.id}>
-              <Link href={nav.slug}>
-                <a>{nav.label}</a>
-              </Link>
+              <Link href={nav.slug}>{nav.label}</Link>
             </MenuItem>
           )
         )}
@@ -55,9 +54,7 @@ const Menu = () => {
                 </DropDownButton>
               ) : (
                 <DropDownLink key={nav.id} onClick={() => setDropDown(!dropDown)}>
-                  <Link href={nav.slug}>
-                    <a>{nav.label}</a>
-                  </Link>
+                  <Link href={nav.slug}>{nav.label}</Link>
                 </DropDownLink>
               )
             )}

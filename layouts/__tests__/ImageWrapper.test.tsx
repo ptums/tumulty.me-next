@@ -9,13 +9,7 @@ describe('<ImageWrapper />', () => {
   it('renders image alt tag', () => {
     renderWithTheme(
       <ImageWrapper>
-        <Image
-          src="/images/peter-face.webp"
-          alt="Peter Tumulty"
-          width={297}
-          height={344}
-          layout="fixed"
-        />
+        <Image src="/images/peter-face.webp" alt="Peter Tumulty" width={297} height={344} />
       </ImageWrapper>
     )
 

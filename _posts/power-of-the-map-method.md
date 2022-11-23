@@ -1,8 +1,8 @@
 ---
 title: The power of the map method
-date: "2017-05-06"
-description: "I first came across the map method about a year ago in a React.js application. In the app, this method iterated over this.props.someArray and ran a callback function that spit that data into some JSX code . Thinking nothing of it, I assumed it was a neater, more modern way to iterate over data.Boy, was I wrong…"
-tagLine: "Go all mad scientist on your arrays"
+date: '2017-05-06'
+description: 'I first came across the map method about a year ago in a React.js application. In the app, this method iterated over this.props.someArray and ran a callback function that spit that data into some JSX code . Thinking nothing of it, I assumed it was a neater, more modern way to iterate over data.Boy, was I wrong…'
+tagLine: 'Go all mad scientist on your arrays'
 tags: post
 ---
 
@@ -12,7 +12,7 @@ tags: post
 
 ![map method](https://res.cloudinary.com/tumulty-web-services/image/upload/v1637275415/tumulty.me/1_oVv2u4W4fh41NtNyzI35vw.png)
 
-*Boy, was I wrong…*
+_Boy, was I wrong…_
 
 Recently, I discovered that the map method can perform more complex tasks than any procedural loop or functional loop. I made this discovery by setting up an experiment that compares how this method and the forEach method handled the same array.
 
@@ -36,7 +36,7 @@ The purpose of the callback function in the map method is intended to allow the 
 
 That is straight out of the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-*"The map() method creates a new array with the results of calling a provided function on every element in this array."*
+_"The map() method creates a new array with the results of calling a provided function on every element in this array."_
 
 Unlike the map method, the purpose of the callback function in the forEach method is simple. It’s callback is intended to perform an operation directly on, or based on, the data in each element of the array.
 
@@ -57,10 +57,10 @@ var data = ["Happy", "Birthday", "To", "Me"];
 data.forEach(transformArray);
 returns 'undefined'
 ```
+
 This is because forEach’s callback restricts any modification to the elements inside the array.
 
 This is an example of a working callback function in a forEach.
-
 
 ```
 function transformArray(element) {
@@ -71,7 +71,7 @@ var nicePeople = ["Bob", "Kam", "Tucker"];
 
 nicePeople.forEach(transformArray);
 
-// returns "Hello from Bob" , "Hello from Kam", "Hello from Tucker" 
+// returns "Hello from Bob" , "Hello from Kam", "Hello from Tucker"
 ```
 
 We aren't changing the elements in any way shape or form. We are simply consoling a message that contains those elements.
@@ -93,7 +93,6 @@ returns ["happy", "birthday", "to" ,"me"]
 works…
 
 And
-
 
 ```
 function transformArray(elm) {

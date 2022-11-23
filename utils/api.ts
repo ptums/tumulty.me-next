@@ -16,7 +16,7 @@ export const getPostBySlug = (slug: string, fields: string[]) => {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  const items: FetchPost  = {}
+  const items: FetchPost = {}
 
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
@@ -43,7 +43,7 @@ export const getPostBySlug = (slug: string, fields: string[]) => {
   return items
 }
 
-export const getAllPosts = (fields: string[]): FetchPost [] => {
+export const getAllPosts = (fields: string[]): FetchPost[] => {
   const slugs = getPostSlugs()
   return slugs.map((slug) => getPostBySlug(slug, fields))
 }

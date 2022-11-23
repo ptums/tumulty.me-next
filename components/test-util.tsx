@@ -29,7 +29,7 @@ const colors = {
   pureBlack: '#000000',
   white: '#fff',
   offWhite: '#fcfaff',
-  whiteLowOpacity: 'rgba(255, 255, 255, 0.75)',  
+  whiteLowOpacity: 'rgba(255, 255, 255, 0.75)',
   gray: '#e9e9e9',
   secondaryGray: '#dee2e6',
   thirdGray: '#ced4da',
@@ -40,7 +40,7 @@ const colors = {
   darkGreen: 'rgba(6, 78, 59)',
   shadowNormal: '0 5px 10px 0 rgba(138, 155, 165, 0.15)',
   shadowLight: '0 .5rem 1rem rgba(0,0,0,.15)!important',
-  shadowDark: '0 .5rem 1rem rgba(0,0,0,.35)' 
+  shadowDark: '0 .5rem 1rem rgba(0,0,0,.35)',
 }
 
 const breakpoints = {
