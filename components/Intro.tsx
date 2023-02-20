@@ -1,19 +1,32 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import styled from 'styled-components'
 
 const Intro = () => (
   <>
     <Title>Peter F. Tumulty</Title>
-    <SubTitle>Lead Web Developer</SubTitle>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+      <SubTitle>Lead Web Developer</SubTitle>
+      <SubTitle>Senior Frontend Engineer</SubTitle>
+      <SubTitle>Software Educator</SubTitle>
+    </motion.div>
+
     <Excerpt>
-      Hi there! My name is Peter, and I&apos;m the owner and lead developer at Tumulty Web Services.
-      I am a web engineer with over ten years of experience and a proud dog parent based out of
-      Brick, NJ and my favorite thing to do is build software that makes an impact.
+      Hi there! My name is Peter, and I am the owner and lead developer at Tumulty Web Services. I
+      am a web engineer with over a decade of experience building software for small businesses,
+      startups, e-commerce companies and agencies. When I am not building software, you can find me
+      teaching
     </Excerpt>
     <Excerpt>
-      My capabilities include front-end development, JAMstack development, mentoring junior
-      developers and recent bootcamp graduates, website architecture, web performance optimization,
-      web vitals improvement, and technical on-site SEO.
+      During my career, I&apos;ve had the opportunity to build software that has impacted thousands
+      of users, and help aspiring developers learn full-stack concepts and launch their careers into
+      tech.
+    </Excerpt>
+    <Excerpt>
+      My capabilities include advanced front-end engineering, full-stack web development, mentoring
+      junior developers and recent boot camp graduates, documentation and proposal writing, web
+      application architecture, web performance optimization, web vitals improvement, and technical
+      on-site SEO.
     </Excerpt>
   </>
 )

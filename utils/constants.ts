@@ -41,11 +41,6 @@ export const CONTACTS: Link[] = [
     label: 'Twitter',
   },
   {
-    id: 2,
-    slug: 'https://www.instagram.com/ptums923',
-    label: 'Instagram',
-  },
-  {
     id: 3,
     slug: 'https://github.com/ptums',
     label: 'Github',
@@ -63,14 +58,14 @@ export const CONTACTS: Link[] = [
 ]
 
 export const RECENT_STACK: string[] = [
-  'Jest',
-  'Next',
-  'React Testing Library',
-  'Styled Components',
+  'TypeScript',
+  'React',
   'Svelte',
+  'React Testing Library',
   'Tailwind.css',
-  'Typescript',
-  'Vercel',
+  'GraphQL',
+  'SQL',
+  'No-SQL',
 ]
 
 interface Project {
