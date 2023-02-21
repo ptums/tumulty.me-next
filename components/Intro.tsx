@@ -34,9 +34,8 @@ const Intro = () => {
       </Excerpt>
       <Excerpt>
         When I am not building software, you can find me teaching others about software development.
-        Through one 1:1 mentoring and coaching or instructing at multiple coding boot camps,
-        I&apos;ve helped aspiring developers learn full-stack concepts and launch their careers into
-        tech.
+        Through one 1:1 mentoring and coaching or instructing at a coding boot camps, I&apos;ve
+        helped aspiring developers learn full-stack concepts and launch their careers into tech.
       </Excerpt>
       <Excerpt>
         My capabilities include advanced front-end engineering, full-stack web development,
