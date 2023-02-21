@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -7,9 +8,9 @@ interface Props {
 }
 const Main = ({ children, pageWidth }: Props) => {
   return (
-    <MainContainer pageWidth={pageWidth} className="fade-in">
-      {children}
-    </MainContainer>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.2 }}>
+      <MainContainer pageWidth={pageWidth}>{children}</MainContainer>
+    </motion.div>
   )
 }
 
