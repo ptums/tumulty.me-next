@@ -9,7 +9,7 @@ import styled from 'styled-components'
 import { CONTACTS, RECENT_STACK } from 'utils/constants'
 
 const SEO = {
-  title: 'Peter Tumulty | Freelance Web Developer',
+  title: 'Peter Tumulty - Lead Web Developer | Senior Frontend Engineer | Software E',
   metaDescription:
     'Peter Tumulty Freelance Web Developer providing technical SEO, fullstack web development, and web site design in Brick, New Jersey.',
 }
@@ -31,7 +31,7 @@ const Home = () => (
           <Intro />
           <RowBlock title="Connect with me" list={CONTACTS} column={1} />
           <RowBlock
-            title="A few technologies I’ve been working with recently:"
+            title="A few technologies I’ve been working with recently"
             list={RECENT_STACK}
             column={2}
           />
