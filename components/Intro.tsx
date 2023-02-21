@@ -29,8 +29,8 @@ const Intro = () => {
       <Excerpt>
         Hi there! My name is Peter, and I am the owner and lead developer at Tumulty Web Services. I
         am a web engineer with over a decade of experience building software for small businesses,
-        startups, e-commerce companies, and agencies. It has been one of the greatest pleasures of
-        my life to create software that has improved the lives of thousands of people.
+        startups, e-commerce companies, and agencies. It has been a great pleasures to create
+        software that has improved the lives of thousands of people.
       </Excerpt>
       <Excerpt>
         When I am not building software, you can find me teaching others about software development.
