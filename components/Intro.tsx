@@ -9,7 +9,7 @@ const Intro = () => {
   useEffect(() => {
     const timeout = setInterval(() => {
       setPhraseIndex((prev) => (phraseIndex !== 2 ? prev + 1 : 0))
-    }, 3000)
+    }, 6000)
 
     return () => clearInterval(timeout)
   }, [phraseIndex])
@@ -22,15 +22,15 @@ const Intro = () => {
         exit={{ opacity: 0 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ duration: 3 }}
       >
         <SubTitle>{PHRASES[phraseIndex]}</SubTitle>
       </motion.div>
       <Excerpt>
         Hi there! My name is Peter, and I am the owner and lead developer at Tumulty Web Services. I
         am a web engineer with over a decade of experience building software for small businesses,
-        startups, e-commerce companies, and agencies. I&apos;ve had the opportunity to create
-        software that has impacted thousands of users.
+        startups, e-commerce companies, and agencies. It has been one of the greatest pleasures of
+        my life to create software that has improved the lives of thousands of people.
       </Excerpt>
       <Excerpt>
         When I am not building software, you can find me teaching others about software development.
