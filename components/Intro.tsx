@@ -30,23 +30,6 @@ const Intro = () => {
       {INTRO.map((paragraph: string) => (
         <Excerpt key={paragraph}>{paragraph}</Excerpt>
       ))}
-      {/* <Excerpt>
-        Hi there! My name is Peter, and I am the owner and lead developer at Tumulty Web Services. I
-        am a web engineer with over a decade of experience building software for small businesses,
-        startups, e-commerce companies, and agencies. It has been a great pleasures to create
-        software that has improved the lives of thousands of people.
-      </Excerpt>
-      <Excerpt>
-        When I am not building software, you can find me teaching others about software development.
-        Through one 1:1 mentoring and coaching or instructing at a coding boot camps, I&apos;ve
-        helped aspiring developers learn full-stack concepts and launch their careers into tech.
-      </Excerpt>
-      <Excerpt>
-        My capabilities include advanced front-end engineering, full-stack web development,
-        mentoring junior developers and recent boot camp graduates, documentation and proposal
-        writing, web application architecture, web performance optimization, web vitals improvement,
-        and technical on-site SEO.
-      </Excerpt> */}
     </>
   )
 }
