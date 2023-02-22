@@ -203,8 +203,8 @@ export const REVIEWS: Review[] = [
 ]
 
 export const INTRO = [
-  "Hello! I'm Peter, the owner and lead developer at Tumulty Web Services. I'm a web engineer with 10+ years of experience building software for small businesses, startups, e-commerce companies, and agencies.",
-  'I have plenty of experience in full stack development using JavaScript, PHP, and Python, but after realizing my true passion for developing beautiful and interactive user interfaces around complex data, I shifted my focus entirely to front end engineer. I am now dedicated to expanding my capabilities in this area and bringing my expertise to projects that require exceptional user experiences.',
+  "Hello! I'm Peter, the owner and lead developer at Tumulty Web Services. I'm a software developer with 10+ years of experience building software for small businesses, startups, e-commerce companies, and agencies.",
+  'I have plenty of experience in full stack development using JavaScript, PHP, and Python, but after realizing my true passion for developing beautiful and interactive user interfaces around complex data, I shifted my focus entirely to front end development. I am now dedicated to expanding my capabilities in this area and bringing my expertise to projects that require exceptional user experiences.',
   "I'm also passionate about teaching! In addition to creating software, I love helping others learn how to build software and kickstart their careers in tech. Through 1:1 mentorship sessions and multiple web development courses I've instructed at various coding bootcamps, I've gained extensive experience in guiding and supporting aspiring developers.",
   'My capabilities include advanced front-end engineering, full-stack web development, mentoring junior developers and recent boot camp graduates, documentation and proposal writing, web application architecture, web performance optimization, web vitals improvement, API and SDK integrations, and technical on-site SEO.',
 ]
