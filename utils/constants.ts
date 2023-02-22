@@ -63,9 +63,9 @@ export const RECENT_STACK: string[] = [
   'Svelte',
   'React Testing Library',
   'Tailwind.css',
+  'Framer Motion',
   'GraphQL',
-  'SQL',
-  'No-SQL',
+  'PostgreSQL',
 ]
 
 interface Project {
