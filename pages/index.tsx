@@ -9,9 +9,9 @@ import styled from 'styled-components'
 import { CONTACTS, RECENT_STACK } from 'utils/constants'
 
 const SEO = {
-  title: 'Peter Tumulty - Lead Web Developer | Senior Frontend Engineer | Software E',
+  title: 'Peter Tumulty - Lead Web Developer | Senior Frontend Engineer | Software Educator',
   metaDescription:
-    'Peter Tumulty Freelance Web Developer providing technical SEO, fullstack web development, and web site design in Brick, New Jersey.',
+    'Peter Tumulty, owner and lead developer at Tumulty Web Services. Web engineer with 10+ years of experience building software for small businesses, startups, e-commerce companies, and agencies.',
 }
 const Home = () => (
   <>
