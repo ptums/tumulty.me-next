@@ -39,6 +39,8 @@ const Card = styled.div`
   max-width: 420px;
   margin-bottom: 24px;
   border: 0.5px solid ${(props) => props.theme.colors.thirdGray};
+  position: relative;
+  z-index: 9;
 
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     width: 435px;

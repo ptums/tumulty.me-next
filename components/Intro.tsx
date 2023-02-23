@@ -28,10 +28,38 @@ interface BtnProps {
   selectedBtn: boolean
 }
 
+interface TextButtonsProps {
+  selectedBtn: string
+  setShowFull: (e: boolean) => void
+  setSelectedBtn: (e: string) => void
+}
+
+const TextButtons = ({ selectedBtn, setShowFull, setSelectedBtn }: TextButtonsProps) => (
+  <ButtonWrapper>
+    <Button
+      selectedBtn={selectedBtn === 'Short Bio'}
+      onClick={() => {
+        setShowFull(false)
+        setSelectedBtn('Short')
+      }}
+    >
+      Short Bio
+    </Button>
+    <Button
+      selectedBtn={selectedBtn === 'Long Bio'}
+      onClick={() => {
+        setShowFull(true)
+        setSelectedBtn('Long')
+      }}
+    >
+      Long Bio
+    </Button>
+  </ButtonWrapper>
+)
 const Intro = () => {
   const [phraseIndex, setPhraseIndex] = useState<number>(0)
   const [showFull, setShowFull] = useState<boolean>(false)
-  const [selectedBtn, setSelectedBtn] = useState<string>('Short')
+  const [selectedBtn, setSelectedBtn] = useState<string>('Short Bio')
   const longIntro = INTRO.slice(1, INTRO.length)
   const shortIntro = INTRO[0].split('')
 
@@ -42,6 +70,12 @@ const Intro = () => {
 
     return () => clearInterval(timeout)
   }, [phraseIndex])
+
+  useEffect(() => {
+    if (showFull) {
+      setSelectedBtn('Long Bio')
+    }
+  }, [showFull])
 
   return (
     <>
@@ -56,26 +90,6 @@ const Intro = () => {
       >
         <SubTitle>{PHRASES[phraseIndex]}</SubTitle>
       </motion.div>
-      <ButtonWrapper>
-        <Button
-          selectedBtn={selectedBtn === 'Short'}
-          onClick={() => {
-            setShowFull(false)
-            setSelectedBtn('Short')
-          }}
-        >
-          Short
-        </Button>
-        <Button
-          selectedBtn={selectedBtn === 'Long'}
-          onClick={() => {
-            setShowFull(true)
-            setSelectedBtn('Long')
-          }}
-        >
-          Long
-        </Button>
-      </ButtonWrapper>
       <motion.div variants={sentence} initial="hidden" animate="visible">
         <Excerpt>
           {shortIntro.map((char: string, index: number) => (
@@ -85,17 +99,44 @@ const Intro = () => {
           ))}
         </Excerpt>
       </motion.div>
-      {showFull &&
-        longIntro.map((paragraph: string, index: number) => (
+      {showFull && (
+        <>
+          {longIntro.map((paragraph: string, index: number) => (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              transition={{ duration: 1.2, delay: index * 1.2 }}
+              key={paragraph}
+            >
+              <Excerpt key={paragraph}>{paragraph}</Excerpt>
+            </motion.div>
+          ))}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: index * 1.2 }}
-            key={paragraph}
+            transition={{ duration: 0.5, delay: longIntro.length + 0.3 * 1.2 }}
           >
-            <Excerpt key={paragraph}>{paragraph}</Excerpt>
+            <TextButtons
+              selectedBtn={selectedBtn}
+              setShowFull={setShowFull}
+              setSelectedBtn={setSelectedBtn}
+            />
           </motion.div>
-        ))}
+        </>
+      )}
+      {!showFull && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 7 }}
+        >
+          <TextButtons
+            selectedBtn={selectedBtn}
+            setShowFull={setShowFull}
+            setSelectedBtn={setSelectedBtn}
+          />
+        </motion.div>
+      )}
     </>
   )
 }
