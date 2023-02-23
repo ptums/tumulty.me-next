@@ -24,9 +24,16 @@ const letter = {
   },
 }
 
+interface BtnProps {
+  selectedBtn: boolean
+}
+
 const Intro = () => {
   const [phraseIndex, setPhraseIndex] = useState<number>(0)
   const [showFull, setShowFull] = useState<boolean>(false)
+  const [selectedBtn, setSelectedBtn] = useState<string>('Short')
+  const longIntro = INTRO.slice(1, INTRO.length)
+  const shortIntro = INTRO[0].split('')
 
   useEffect(() => {
     const timeout = setInterval(() => {
@@ -50,38 +57,45 @@ const Intro = () => {
         <SubTitle>{PHRASES[phraseIndex]}</SubTitle>
       </motion.div>
       <ButtonWrapper>
-        <Button onClick={() => setShowFull(false)}>Short</Button>
-        <Button onClick={() => setShowFull(true)}>Long</Button>
+        <Button
+          selectedBtn={selectedBtn === 'Short'}
+          onClick={() => {
+            setShowFull(false)
+            setSelectedBtn('Short')
+          }}
+        >
+          Short
+        </Button>
+        <Button
+          selectedBtn={selectedBtn === 'Long'}
+          onClick={() => {
+            setShowFull(true)
+            setSelectedBtn('Long')
+          }}
+        >
+          Long
+        </Button>
       </ButtonWrapper>
-      <Excerpt key={INTRO[0]}>{INTRO[0]}</Excerpt>
-      {showFull && (
-        <>
-          <motion.div variants={sentence} initial="hidden" animate="visible">
-            <Excerpt>
-              {INTRO[1].split('').map((char: string, index: number) => (
-                <motion.span key={char + '-' + index} variants={letter}>
-                  {char}
-                </motion.span>
-              ))}
-            </Excerpt>
-            <Excerpt>
-              {INTRO[2].split('').map((char: string, index: number) => (
-                <motion.span key={char + '-' + index} variants={letter}>
-                  {char}
-                </motion.span>
-              ))}
-            </Excerpt>
-            <Excerpt>
-              {INTRO[INTRO.length - 1].split('').map((char: string, index: number) => (
-                <motion.span key={char + '-' + index} variants={letter}>
-                  {char}
-                </motion.span>
-              ))}
-            </Excerpt>
+      <motion.div variants={sentence} initial="hidden" animate="visible">
+        <Excerpt>
+          {shortIntro.map((char: string, index: number) => (
+            <motion.span key={char + '-' + index} variants={letter}>
+              {char}
+            </motion.span>
+          ))}
+        </Excerpt>
+      </motion.div>
+      {showFull &&
+        longIntro.map((paragraph: string, index: number) => (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2, delay: index * 1.2 }}
+            key={paragraph}
+          >
+            <Excerpt key={paragraph}>{paragraph}</Excerpt>
           </motion.div>
-        </>
-      )}
-      {!showFull && <Excerpt key={INTRO[INTRO.length - 1]}>{INTRO[INTRO.length - 1]}</Excerpt>}
+        ))}
     </>
   )
 }
@@ -108,19 +122,17 @@ const Excerpt = styled.p`
   margin: 24px 0;
 `
 
-const MotionExcerpt = styled(motion.p)`
-  ${Excerpt}
-`
-
-const Button = styled.button`
+const Button = styled.button<BtnProps>`
   ${(props) => props.theme.fonts.xxxl};
   transition: all 0.4s;
   outline: 0;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) =>
+    props.selectedBtn ? props.theme.colors.lightGreen : props.theme.colors.white};
   border-radius: 4px;
   border: 0.5px solid ${(props) => props.theme.colors.lightGreen};
   padding: 3px 24px;
-  color: ${(props) => props.theme.colors.mediumGreen};
+  color: ${(props) =>
+    props.selectedBtn ? props.theme.colors.white : props.theme.colors.mediumGreen};
   text-decoration: none;
 
   &:hover {
