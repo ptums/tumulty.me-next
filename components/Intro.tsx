@@ -114,7 +114,7 @@ const Intro = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: longIntro.length + 0.5 * 1.2 }}
+            transition={{ duration: 0.5, delay: longIntro.length + 0.3 * 1.2 }}
           >
             <TextButtons
               selectedBtn={selectedBtn}
@@ -125,11 +125,17 @@ const Intro = () => {
         </>
       )}
       {!showFull && (
-        <TextButtons
-          selectedBtn={selectedBtn}
-          setShowFull={setShowFull}
-          setSelectedBtn={setSelectedBtn}
-        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 7 }}
+        >
+          <TextButtons
+            selectedBtn={selectedBtn}
+            setShowFull={setShowFull}
+            setSelectedBtn={setSelectedBtn}
+          />
+        </motion.div>
       )}
     </>
   )
