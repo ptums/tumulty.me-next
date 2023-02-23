@@ -19,13 +19,7 @@ const Home = () => (
     <Main pageWidth="768px">
       <HomeContainer>
         <ImageWrapper>
-          <Image
-            src="/images/peter-face.webp"
-            alt="Peter Tumulty"
-            width={297}
-            height={344}
-            layout="fixed"
-          />
+          <Image src="/images/peter-face.webp" alt="Peter Tumulty" width={297} height={344} />
         </ImageWrapper>
         <Details>
           <Intro />
