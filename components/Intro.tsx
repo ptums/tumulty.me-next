@@ -38,7 +38,7 @@ const Intro = () => {
   useEffect(() => {
     const timeout = setInterval(() => {
       setPhraseIndex((prev) => (phraseIndex !== 2 ? prev + 1 : 0))
-    }, 4500)
+    }, 3000)
 
     return () => clearInterval(timeout)
   }, [phraseIndex])
