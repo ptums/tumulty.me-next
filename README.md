@@ -18,5 +18,7 @@ Wanted to create blogfolio that pulled in my work, my blog posts, and resume int
 
 ## To Do
 
-- Replace CSS animations with Framer Motion
-- Finish writing tests for all pages and components
+- Finish text animation
+  -- 1st paragraph type out effect
+  -- 2nd & 3rd paragraph fade in text
+- Add green background color to selected buttons
