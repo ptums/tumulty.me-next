@@ -5,25 +5,6 @@ import { INTRO } from 'utils/constants'
 
 const PHRASES = ['Lead Web Developer', 'Senior Front End Engineer', 'Software Educator']
 
-const sentence = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0.5,
-      staggerChildren: 0.03,
-    },
-  },
-}
-
-const letter = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-}
-
 interface BtnProps {
   selectedBtn: boolean
 }
@@ -65,7 +46,7 @@ const Intro = () => {
   useEffect(() => {
     const timeout = setInterval(() => {
       setPhraseIndex((prev) => (phraseIndex !== 2 ? prev + 1 : 0))
-    }, 3000)
+    }, 3200)
 
     return () => clearInterval(timeout)
   }, [phraseIndex])
