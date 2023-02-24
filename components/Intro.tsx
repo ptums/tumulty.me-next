@@ -171,7 +171,7 @@ const Button = styled.button<BtnProps>`
     props.selectedBtn ? props.theme.colors.lightGreen : props.theme.colors.white};
   border-radius: 4px;
   border: 0.5px solid ${(props) => props.theme.colors.lightGreen};
-  padding: 3px 24px;
+  padding: 8px;
   color: ${(props) =>
     props.selectedBtn ? props.theme.colors.white : props.theme.colors.mediumGreen};
   text-decoration: none;
@@ -183,7 +183,7 @@ const Button = styled.button<BtnProps>`
     cursor: pointer;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     &:first-child {
       margin-bottom: 12px;
     }
@@ -200,6 +200,7 @@ const Button = styled.button<BtnProps>`
     &:first-child {
       margin-right: 16px;
     }
+    width: 100px;
   }
 `
 
