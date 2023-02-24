@@ -61,7 +61,6 @@ const Intro = () => {
   const [showFull, setShowFull] = useState<boolean>(false)
   const [selectedBtn, setSelectedBtn] = useState<string>('Short Bio')
   const longIntro = INTRO.slice(1, INTRO.length)
-  const shortIntro = INTRO[0].split('')
 
   useEffect(() => {
     const timeout = setInterval(() => {
@@ -90,15 +89,7 @@ const Intro = () => {
       >
         <SubTitle>{PHRASES[phraseIndex]}</SubTitle>
       </motion.div>
-      <motion.div variants={sentence} initial="hidden" animate="visible">
-        <Excerpt>
-          {shortIntro.map((char: string, index: number) => (
-            <motion.span key={char + '-' + index} variants={letter}>
-              {char}
-            </motion.span>
-          ))}
-        </Excerpt>
-      </motion.div>
+      <Excerpt>{INTRO[0]}</Excerpt>
       {showFull && (
         <>
           {longIntro.map((paragraph: string, index: number) => (
@@ -128,7 +119,7 @@ const Intro = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 7 }}
+          transition={{ duration: 0.5, delay: 0 }}
         >
           <TextButtons
             selectedBtn={selectedBtn}
