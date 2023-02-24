@@ -183,6 +183,14 @@ const Button = styled.button<BtnProps>`
     cursor: pointer;
   }
 
+  @media (max-width: 960px) {
+    &:first-child {
+      margin-bottom: 12px;
+    }
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   &:active {
     background-color: ${(props) => props.theme.colors.lightGreen};
     color: ${(props) => props.theme.colors.white};
