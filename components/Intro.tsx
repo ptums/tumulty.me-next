@@ -21,7 +21,7 @@ const TextButtons = ({ selectedBtn, setShowFull, setSelectedBtn }: TextButtonsPr
       selectedBtn={selectedBtn === 'Short Bio'}
       onClick={() => {
         setShowFull(false)
-        setSelectedBtn('Short')
+        setSelectedBtn('Short Bio')
       }}
     >
       Short Bio
@@ -30,7 +30,7 @@ const TextButtons = ({ selectedBtn, setShowFull, setSelectedBtn }: TextButtonsPr
       selectedBtn={selectedBtn === 'Long Bio'}
       onClick={() => {
         setShowFull(true)
-        setSelectedBtn('Long')
+        setSelectedBtn('Long Bio')
       }}
     >
       Long Bio
